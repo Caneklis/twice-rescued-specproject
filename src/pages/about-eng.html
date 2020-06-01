@@ -1,0 +1,355 @@
+---
+title: About exhibition
+description: The photo exhibition "Twice Rescued"
+---
+{% set page_title = "about" %}
+{% set page_lang_link = "about" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+<section class="text">
+  <div class="text__wrapper">
+    <div class="text__promo">
+      <p>The photo exhibition "Twice Rescued" is organized by the Pushkin State Museum of Fine Arts together with the
+        Russian Centre of Science and Culture in Chennai. The exhibition, dedicated to the 75th anniversary of the Great
+        Victory, will be opened on September 3, 2020 due to the situation with the coronavirus. It will feature
+        photographs
+        showing the results of many years of museum conservators' work with art objects that were damaged during the
+        Second World War.
+      </p>
+      <p>At the end of the war in 1945, the Pushkin State Museum of Fine Arts received artworks brought from Germany to
+        the Soviet Union as restitution. In the first post-war decade, the efforts of museum specialists - curators and
+        conservators- were aimed at saving the painting masterpieces from the Dresden Gallery, many of which required
+        immediate conservation treatments.
+      </p>
+      <p> In the early 2000s, researchers and object conservators began to study and restore monuments of ancient art,
+        including a large number of burnt and deformed fragments of ceramics, metal, bone and glass. The results of
+        these years of work done by the team of conservators from several museums and specialized workshops in Moscow,
+        were presented at the exhibitions in the Pushkin State Museum of Fine Arts "Archaeology of War. The Return from
+        Nonexistence" (2005) and "The Art of Ancient Cyprus" (2014). In 10 years, more than 750 museum objects have been
+        conserved and restored. In 2015, a project to conserve Donatello's bronze sculptures, as well as some works by
+        other masters of Western European Renaissance sculpture, was launched together with the Bode Museum.
+      </p>
+      <p>The exhibition "Twice Rescued" presents only a small part of the objects from the "Transferred art" collection
+        restored at the Pushkin State Museum - 30 photographs of unique works of ancient and Western European art. The
+        specially created page on the Pushkin State Museum Department of Conservation website will introduce you to the
+        history of the museum collections, the fate of individual objects and the remarkable results of the work done by
+        our conservators, thanks to whom these pieces have found their second life.
+      </p>
+    </div>
+    <h2 class="title">The Kaiser-Friedrich-Museum</h2>
+    <p>The State Museums of Berlin is one of the oldest and most extensive museum associations in Western Europe. The
+      history of Berlin's museums began with the collection of the Brandenburg Electors, the so-called Kunstkammer,
+      which was formed in the late 16th century. During the following centuries, the collection was continuously
+      expanding, which led to its division into several museum collections. Formed on the basis of the Kunstkammer,
+      collections of objects of natural history and ancient art turned into separate museums, and the most valuable
+      objects of decorative and applied art were the Berlin Castle collection. The nineteenth century saw the opening of
+      many new museums built by the famous architect Karl Friedrich Schinkel (1781-1841) and his students. The following
+      museums were opened to the public: the Royal Museum (now the Old Museum, 1830), the New Museum (1855), the
+      National Gallery (1861), which in the 20th century was called the "Old National Gallery" after the "New" was
+      opened. The erection of the Kaiser Friedrich Museum on Museum Island continued the era of rapid construction.
+    </p>
+    <p>From the very beginning, the Kaiser Friedrich Museum was intended to be a museum of Italian Renaissance art,
+      because by this time Berlin had the largest collection of Italian sculpture and painting outside Italy. Wilhelm
+      von Bode (1845-1929) was the initiator and inspirer of the idea of creating a museum with its own building and
+      collection. He was an art historian and museum worker who for many years conducted an unprecedented campaign for
+      the acquisition of art in Italy and abroad. The interiors of the newly opened museum reflected Bodet's taste as a
+      collector: paintings, sculpture and decorative art objects were exhibited together, which distinguished the museum
+      setting from the traditional one. Separate halls, such as the Rotunda or Basilica, were an attempt to recreate the
+      architecture and interior decoration of Italian churches. Others, filled with many small objects, became kind of
+      cabinets of curiosities, reminiscent of the interiors of private collectors' houses.
+    </p>
+    <p>A few years later, the turn to expand the premises reached the Berlin Antique Collection - in 1910 the
+      construction of the Pergamon-Museum began on the nearby territory. In addition to the famous Pergamon Altar, it
+      displayed the collections of the West Asian Museum and the Museum of Islamic Art. From 1930 to 1939, the German
+      Museum was located nearby, where masterpieces of German sculpture were exhibited.
+    </p>
+
+    {% import "../templates/data/slider.html" as slides %}
+
+    <section class="slider" id="1">
+      <ul class="slider__list popup-gallery">
+        {% for slide in slides.slider1 %}
+        <li class="Slider__item">
+          <a href="img/articles/1/1.{{slide.id}}.jpg" data-title="{{slide.title_eng}}" data-effect="mfp-zoom-in"><img
+              src="img/articles/1/1.{{slide.id}}.jpg" alt="{{slide.title_eng}}" loading="lazy">
+          </a>
+          <p class="slider__text">{{slide.title_eng}}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+  </div>
+</section>
+<section class="text">
+  <div class="text__wrapper">
+    <h2 class="title">The Friedrichshain park bunker</h2>
+    <p>With the outbreak of World War II, the management of the State Museums of Berlin were concerned about the
+      preservation of objects from museum collections. In 1939 the exhibitions on Museum Island were closed to the
+      public, the objects were packed and prepared for transportation.
+    </p>
+    <p>A large number of different works of art - ancient, Western European, Asian and other - were housed in several
+      vaults in Berlin and its suburbs, which were considered safe. The original plan of the German military command did
+      not assume that the city would be attacked from the air, but already in August 1940, the first bombing of Berlin
+      by the British Air Force showed that this was not the case.
+    </p>
+    <p>The response to the air threat was the construction of massive concrete structures in Berlin's three major parks
+      - in the Zoological Garden, Friedrichshain and Humboldthain - so-called flak towers (Flaktürme) - of about 60 x 60
+      m in size and equipped with anti-aircraft guns. The location (far from the townhouses) and the height of the
+      towers were dictated by the need for a wide firing sector. Nicknamed "firing cathedrals" by the designer Friedrich
+      Thamm, the anti-aircraft towers also had a considerable ideological meaning - they were supposed to symbolise
+      enormous military power, bring peace and hope to the citizens' hearts. Their architectural design was the
+      responsibility of Albert Speer's bureau, who personally discussed the plans with Adolf Hitler.
+    </p>
+    <p>The technical arrangement of each anti-aircraft battery required, in addition to the main gun tower, another
+      fortified structure at a short distance from it - from which guidance and radar were conducted. These multi-storey
+      buildings, with reinforced concrete walls of about two metres thick, were called "leitturm" ("control towers").
+      Their windows and doors had steel panels 5-10 cm thick with massive locking mechanisms, and the building's volume
+      was about 40 thousand m3. The control towers still had plenty of space left after the equipment and personnel of
+      the Luftwaffe were placed. For this reason, in two of them - in the Zoological Garden and in the Friedrichshain
+      Park - the administration of the Berlin Museums was given the opportunity to shelter the collections.
+    </p>
+    <p>The Friedrichshain Tower in its lower tier housed more than 1600 paintings from the collection of the Berlin
+      Picture Gallery and, on the floor above the sculpture, collections of the Kaiser Friedrich Museum, the Antique
+      Collection, the Museum of Decorative Arts, the National Gallery and the Asian Art Collection.
+    </p>
+
+    {% import "../templates/data/slider.html" as slides %}
+
+
+
+    <section class="slider" id="2">
+      <ul class="slider__list popup-gallery">
+        {% for slide in slides.slider2 %}
+        <li class="Slider__item">
+          <a href="img/articles/2/2.{{slide.id}}.jpg" data-title="{{slide.title_eng}}" data-effect="mfp-zoom-in"><img
+              src="img/articles/2/2.{{slide.id}}.jpg" alt="{{slide.title_eng}}" loading="lazy">
+          </a>
+          <p class="slider__text">{{slide.title_eng}}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+  </div>
+</section>
+<section class="text">
+  <div class="text__wrapper">
+    <h2 class="title">Berlin, 1945</h2>
+    <p>Already at the end of 1944, Berlin's fortified depositories, which had reliably protected works of art in the
+      previous years of the war, ceased to give confidence to the German command. In an atmosphere of strict secrecy and
+      lack of transport, from November 1944 to April 1945, several freight expeditions evacuated more than 1,200
+      paintings from the bunker in Friedrichshain to the Kaiseroda salt mine in Merkers, some 400 km southwest of
+      Berlin. It was there, together with other valuable finds - the Reichsbank gold reserve and the famous bust of
+      Nefertiti - that they were discovered in April 1945 by the US Army, which had a special unit set up to look for
+      works of art (MFA&A).</p>
+    <p>The fate of the rest of the collections in Berlin was different. Since the capture of the city by Soviet troops
+      on May 2, 1945, the efforts of the trophy brigades, which performed a function similar to that of the U.S. Armed
+      Forces, were focused on the evacuation of works of art from the Zoo bunker. According to the agreement on the
+      quadripartite division of Berlin, the territory of the Zoological Garden was to be in the British sector of
+      occupation, and museum collections would be transferred to the Allies. All valuables from the vault, including the
+      famous "Priam Treasure", were hastily evacuated to the Soviet bridgehead Berlin-Karlshorst for shipment to the
+      USSR. The monumental reliefs of the Pergamon Altar were a great difficulty to transport.
+    </p>
+    <p>By this time in a bunker in Friedrichshain, formally under the control of the Soviet troops, the first of two
+      devastating fires had already occurred. At first, a vault in the lower tier caught fire, which housed large
+      paintings - their evacuation was impossible. More than 400 first-class works of art, among which were seven major
+      works of Rubens and the workshop, famous "St. Matthew" by Caravaggio and "Kingdom of Pan" by Signorelli, were
+      irrevocably lost. The first fire, which happened between May 5 and 6, was followed by the second one, which
+      happened between May 14 and 18 and destroyed the museum storage in the upper tier of the bunker. Among the many
+      collections kept there were: ancient and medieval sculpture, Byzantine, Chinese and Japanese art, decorative
+      ceramics, jewellery, coins and frames. The causes and exact circumstances of both the first and second fires have
+      not been established, although there are good reasons to believe that at least one of them was the result of
+      arson.
+    </p>
+
+    {% import "../templates/data/slider.html" as slides %}
+
+    <section class="slider" id="3">
+      <ul class="slider__list popup-gallery">
+        {% for slide in slides.slider3 %}
+        <li class="Slider__item">
+          <a href="img/articles/3/3.{{slide.id}}.jpg" data-title="{{slide.title_eng}}" data-effect="mfp-zoom-in"><img
+              src="img/articles/3/3.{{slide.id}}.jpg" alt="{{slide.title_eng}}" loading="lazy">
+          </a>
+          <p class="slider__text">{{slide.title_eng}}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+  </div>
+</section>
+<section class="text">
+  <div class="text__wrapper">
+    <h2 class="title">The Pushkin State Museum, 1945–1946</h2>
+    <p>Unlike the paintings; the sculptures, ceramics and decorative objects in the bunker in Friedrichshain were not
+      completely destroyed by fire. The first analysis showed that some of the collections could be saved under the
+      layer of ashes and debris generated by the fire. The works, which began in autumn 1945 led by an archaeologist,
+      professor of Moscow State University V. Blavatsky, and lasted until the spring of 1946, were full archaeological
+      excavations - the most important task was to identify each found object. Several thousand extracted fragments were
+      sent by two different trains to Moscow and Leningrad, which led to the separation of the collections.
+    </p>
+    <p>The director of the Pushkin State Museum of Fine Arts. D. Mercurov, who insisted on replenishing the funds with
+      the trophy collections, somewhat overestimated the capabilities of the museum, which needed more space and
+      specialists. It was out of the question to start a full restoration of works from the Berlin collections in the
+      State Museum of Fine Arts, where at the same time there was the collection from the Dresden Gallery and several
+      others brought from different regions of Germany - the Moscow museum itself, which survived the evacuation of
+      funds and experienced all the hardships of war time, had many problems. Nevertheless, a significant amount of
+      conservation work - identification, gluing of fragments, cleaning - was carried out in the early 1950s by a small
+      number of conservators.
+    </p>
+
+    <p>Merkurov's ambitious plans to create a museum of world art were not destined to come true, and the policy of the
+      USSR on the issue of trophy art in the 1950s took a different course. Partly following the example of the U.S.
+      government, which returned 200 masterpieces of painting to museums in West Berlin, after a lengthy tour of cities
+      in the U.S., the Soviet Union launched a large-scale campaign to return the displaced property to museums in East
+      Germany and Poland. The return of the Dresden Gallery's paintings, which was preceded by an exhibition in Moscow,
+      was its most famous episode. As a result of the transfers of 1955-1958 from the 2.5 million objects taken by the
+      Soviet troops, 1.5 million returned to the East German Democratic Republic. Before that, exhibitions were held in
+      Moscow and Leningrad, which were attended by over 1 million people. After they were over, the exhibits were
+      delivered to Berlin, where shortly before that the old building of the Kaiser Friedrich Museum was opened to the
+      public under a new name - the Bode Museum. A large part of the exhibition was taken up by sculptures extracted
+      from the bunker in Friedrichshain and restored in the Soviet Union.
+    </p>
+
+    {% import "../templates/data/slider.html" as slides %}
+
+    <section class="slider" id="4">
+      <ul class="slider__list popup-gallery">
+        {% for slide in slides.slider4 %}
+        <li class="Slider__item">
+          <a href="img/articles/4/4.{{slide.id}}.jpg" data-title="{{slide.title_eng}}" data-effect="mfp-zoom-in"><img
+              src="img/articles/4/4.{{slide.id}}.jpg" alt="{{slide.title_eng}}" loading="lazy">
+          </a>
+          <p class="slider__text">{{slide.title_eng}}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+  </div>
+</section>
+<section class="text">
+  <div class="text__wrapper">
+    <h2 class="title">Work with the Transferred Art Collection in 2000 - 2016</h2>
+    <p>Not all objects recovered from the Friedrichshain bunker were transferred back to the GDR. Many fragmented
+      objects that lost their original appearance and needed large-scale restoration work remained in custody of the
+      museums of Moscow and Leningrad. It is safe to say that fears of spoiling the positive political effect of the
+      return of the newly acquired and restored works of art in East Germany by transferring objects that too closely
+      resembled the disabled from the war played a decisive role. However, while remaining in Soviet museums in a
+      special secret position and occupying limited storage resources, these works could not be exhibited or used in any
+      way. A temporary solution to the problem was to transfer the objects to the Archive of Artworks under the Ministry
+      of Culture of the USSR, which took place in 1963. From this depository, located on the territory of the The
+      Trinity Lavra of St. Sergius in Zagorsk (now Sergiev Posad), the objects from the special collection began to
+      return to the museum only after the collapse of the USSR, in the late 1990s - early 2000s. For several decades the
+      pieces were covered by the veil of secrecy: they were seen only by a few museum curators who came with
+      inspections, for researchers and museum visitors they virtually ceased to exist.
+    </p>
+    {% import "../templates/data/slider.html" as slides %}
+
+    <section class="slider" id="5">
+      <ul class="slider__list popup-gallery">
+        {% for slide in slides.slider5 %}
+        <li class="Slider__item">
+          <a href="img/articles/5/5.{{slide.id}}.jpg" data-title="{{slide.title_eng}}" data-effect="mfp-zoom-in"><img
+              src="img/articles/5/5.{{slide.id}}.jpg" alt="{{slide.title_eng}}" loading="lazy">
+          </a>
+          <p class="slider__text">{{slide.title_eng}}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    <p>Only the next generations of museum curators and restorers were able to study and process all these materials.
+      Often they did not have any information about the work of their predecessors in the 1950s. The specialists of the
+      Pushkin State Museum of Fine Arts started to restore the collection of antique ceramics, which consisted of burnt
+      and deformed fragments packed in war-time newspapers, in 2002. The result of the work of a huge team of
+      conservators from several museums and specialized workshops was the exhibition "Archaeology of War. Returning from
+      Nonexistence" opened in April 2005. It features the works of antique ceramics, bronze and carved bone that were in
+      the bunker in Friedrichshain. Much of the damage seemed to be irreversible at first sight, and the difficulties
+      encountered by the conservators required the development of new techniques. The exhibition showed the importance
+      of cooperation with the German colleagues, which at that time was just beginning. In November 2005, a conservation
+      colloquium was held with conservators from Berlin working on similar tasks. The Pushkin State Museum conservators
+      approached the next project dedicated to the art of Ancient Cyprus with experience, which made it possible to
+      present more than 300 restored exhibits - painted vases, terracotta and miniature statuettes from the Bronze Age
+      to the era of the Roman Empire - at the exhibition in 2014.</p>
+    {% import "../templates/data/slider.html" as slides %}
+
+    <section class="slider" id="6">
+      <ul class="slider__list popup-gallery">
+        {% for slide in slides.slider6 %}
+        <li class="Slider__item">
+          <a href="img/articles/6/6.{{slide.id}}.jpg" data-title="{{slide.title_eng}}" data-effect="mfp-zoom-in"><img
+              src="img/articles/6/6.{{slide.id}}.jpg" alt="{{slide.title_eng}}" loading="lazy">
+          </a>
+          <p class="slider__text">{{slide.title_eng}}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+  </div>
+</section>
+
+<section class="text">
+  <div class="text__wrapper">
+    <h2 class="title">Donatello and other Renaissance masters: research and conservation</h2>
+    <p>In 2015, the Pushkin State Museum of Fine Arts began a new project dedicated to the conservation and restoration
+      of Italian Renaissance sculptures from the former Berlin collection. The project, from the very beginning intended
+      as an interaction between the two museums, is conducted in cooperation with the Bode Museum in Berlin.</p>
+
+    <p>The works of famous Renaissance masters such as Donatello, Andrea del Verrocchio, Luca Della Robbia and others,
+      which are still kept in depositories of the Moscow Museum, are extremely difficult to restore. Made of marble and
+      limestone, the sculptures cannot bear high temperatures as it causes them to lose their structural strength.
+      Restoration of many of these sculptures requires unique methods and special studies.
+    </p>
+
+    <p>Since March 2016, Russian and German conservators have been sharing their experience and methods of work. The
+      participation of Berlin specialists provides effective assistance to Russian conservators among other things
+      because Berlin has preserved original moulds taken from sculptures to make plaster casts. These moulds give an
+      idea of the original form of the objects and are used to fill in the losses. Since 2018, Russian specialists have
+      been training in Berlin, where they work on objects with similar damages.
+    </p>
+
+    <p>On the Russian side, specialists from the Kurchatov Institute National Research Centre, which cooperates with the
+      Pushkin State Museum of Fine Arts in several areas, have joined the project. Prolonged treatments did not become
+      an obstacle to the return of these significant works of sculpture to the public. A series of conferences held by
+      the Moscow and Berlin curators in Berlin (Bode Museum), Florence (Max Planck Institute for Art History) and Trento
+      (University of Trento) presented to the scientific community preliminary results and announced the existence of 57
+      sculptures that were considered lost after World War II. A special page was opened to the public at
+      www.museumconservation.ru containing photographs, information and conservation dossiers on the objects included in
+      the project. The information has been translated into four European languages and is regularly updated. In January
+      2019 the first bronze statue "John the Baptist", considered to be the work of the famous Florentine sculptor
+      Donatello, conserved within the project, was exhibited at the Pushkin State Museum. Its conservation was completed
+      by the discovery of original fragments which were previously considered lost. It is one of the most valuable works
+      now available to museum visitors from all over the world. An exhibition of 15 more restored bronze sculptures is
+      scheduled for October 2020.
+
+    </p>
+
+    {% import "../templates/data/slider.html" as slides %}
+
+    <section class="slider" id="7">
+      <ul class="slider__list popup-gallery">
+        {% for slide in slides.slider7 %}
+        <li class="Slider__item">
+          <a href="img/articles/7/7.{{slide.id}}.jpg" data-title="{{slide.title_eng}}" data-effect="mfp-zoom-in"><img
+              src="img/articles/7/7.{{slide.id}}.jpg" alt="{{slide.title_eng}}" loading="lazy">
+          </a>
+          <p class="slider__text">{{slide.title_eng}}</p>
+        </li>
+        {% endfor %}
+        {% for slide in slides.slider8 %}
+        <li class="Slider__item">
+          <a href="img/articles/8/8.{{slide.id}}.jpg" data-title="{{slide.title_eng}}" data-effect="mfp-zoom-in"><img
+              src="img/articles/8/8.{{slide.id}}.jpg" alt="{{slide.title_eng}}" loading="lazy">
+          </a>
+          <p class="slider__text">{{slide.title_eng}}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,62 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "16" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--horizontal">
+
+  <div class="before-after-eng" style="max-width: 800px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[15].id }}/{{ tests.list[15].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[15].id }}/{{ tests.list[15].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[14].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[16].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+      <h2>{{ tests.list[15].author_eng }}</h2>
+      <h3>{{ tests.list[15].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[15].place_eng }}</li>
+        <li>Inv. {{ tests.list[15].inv_eng }}</li>
+        <li>{{ tests.list[15].material_eng }}</li>
+        <li>{{ tests.list[15].size }} cm.</li>
+        <li>{{ tests.list[15].fact_eng }}</li>
+        <li>{{ tests.list[15].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>The two terracotta figures depicting playful reclining putto-babies were acquired by a famous collector Oscar
+      Heinauer in Paris in 1882, who then presented them to the Berlin Museums. The pose of one of them (leaning on the
+      arm) mirrors the drawing from a sketch album of Verrocchio's workshop (which is now in the Louvre, Paris). There
+      are sculptural replications of the same scene in a smaller size made of bronze (the Metropolitan Museum, New
+      York), marble (the De Young Museum, San Francisco), and glazed terracotta (New York, private collection). In
+      addition, it is possible to trace the outline of this figure in paintings. For example, Albrecht Dürer, who
+      visited Venice in 1506, used it as a pose for the Infant Christ ("Madonna with a pear", 1516, Vienna, the Museum
+      of Art History). The extant list of items from Verrocchio's workshop includes two braccio-long (58.36 cm)
+      terracotta figures of laying boys. It allowed researchers to identify them as the figures from the Berlin
+      collection and attribute them to different students of the artist. Linda Pisani, the author of a recent (2007)
+      monograph about Francesco di Simone Ferrucci (1473-1497), attributes the putto figures to the sculptor, assuming
+      also the possibility of his assistant Sandro di Marco's involvement, and dates them to 1486-87. It should be noted
+      that the figure leaning on the left arm lacks the elaboration and polish and is clearly made as a "mirror"
+      replication of the first figure.</p>
+  </div>
+</section>
+
+{% endblock %}

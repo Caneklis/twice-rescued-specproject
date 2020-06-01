@@ -1,0 +1,59 @@
+---
+title: Страница предмета
+description: межмузейный проект ДВАЖДЫ СПАСЕННЫЕ
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "29-eng" %}
+{% set id = "29" %}
+{% extends "../templates/layouts/_layout.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--horizontal">
+
+  <div class="before-after">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[28].id }}/{{ tests.list[28].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[28].id }}/{{ tests.list[28].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[27].id }}.html" class="arrows__link"><img src="img/left-arrow.svg" width="50" alt=""></a>
+        <a href="{{ tests.list[29].id }}.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+      <h2>{{ tests.list[28].author }}</h2>
+      <h3>{{ tests.list[28].title }}</h3>
+
+      <ul>
+        <li>{{ tests.list[28].place }}</li>
+        <li>Инв. {{ tests.list[28].inv }}</li>
+        <li>{{ tests.list[28].material }}</li>
+        <li>В. {{ tests.list[28].size }} см.</li>
+        <li>{{ tests.list[28].masters }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>Эта и парная к ней необычные по форме и сюжету бронзовые композиции были приобретены в музеи Берлина в 1935 году
+      из собрания Альберта Фигдора, одного из крупнейших венских коллекционеров искусства. Приписывавшиеся ранее
+      падуанскому скультпору Андреа Риччо, сейчас они считаются работой другого мастера из Падуи, Агостино Дзоппо
+      (1515-1572), выполнявшего обязанности литейщика при Якопо Сансовино, главном скульптора Венеции XVI в. Каждая из
+      них изображает врата подземного царства Аида, вдохновляясь текстом «Метаморфоз» Овидия, в которых подробно
+      описывались муки обитателей Тартара, увиденные спустившейся Юноной. Немалое число мифологических персонажей
+      (Сизиф, Тантал, Титий и другие) населяет мрачный пейзаж, придавая ему характер фантасмагории. В инвентаре
+      мастерской Дзоппо, составленном после его смерти, упоминается две пары подобных скульптур. Еще два аналогичных
+      произведения находятся сейчас в коллекции музея Виктории и Альберта, Лондон. Отверстия в их верхней части дают
+      основания предполагать, что их могли использовать как курильницы.
+    </p>
+    <p><i>Реставрация</i></p>
+    <p>Определен состав металла. Проведена очистка и укрепление поверхности.</p>
+  </div>
+</section>
+
+{% endblock %}

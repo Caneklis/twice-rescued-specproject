@@ -1,0 +1,77 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+width: 566
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "01" %}
+{% set id = "01" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--vertical">
+
+  <div class="before-after-eng" style="max-width: {{ tests.list[0].width }}px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[0].id }}/{{ tests.list[0].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[0].id }}/{{ tests.list[0].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[29].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[1].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+
+        <a class="popup-youtube"
+          href="https://sketchfab.com/models/19f7e6edc70a4f6480010493b83a2076/embed?preload=1&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1"><img
+            src="img/video_play_lines.svg" width="50"></a>
+
+        <a href="http://www.museumconservation.ru/data/specprojects/amfora/story_2_eng.html" target="_blank"><img
+            src="img/amfora.svg" width="50"></a>
+      </div>
+
+      <h2>{{ tests.list[0].author_eng }}</h2>
+      <h3>{{ tests.list[0].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[0].place_eng }}</li>
+        <li>Inv. {{ tests.list[0].inv_eng }}</li>
+        <li>{{ tests.list[0].material_eng }}</li>
+        <li>В. {{ tests.list[0].size }} cm.</li>
+        <li>{{ tests.list[0].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>This monumental Panathenaic amphora was found in the 19th century in Ceglie di Campo in Southern Italy, in the
+      territory of modern Apulia. There, in one of the tombs were found several magnificent vases of one of the last
+      great Greek vase painters, the Darius Painter (named after the famous krater in Naples with the image of the
+      council of the Persian king and marked with the name "DAREIOS").</p>
+    <p>The body of the vessel is divided into two parts with a central belt depicting pairs of opposing beasts and
+      fantastic creatures. Below is the popular Italian scene of the punishment of Actaeon, a Boeotian hunter who
+      watched the goddess of hunting bathe. Artemis turned Actaeon into deer, who was ripped apart by his own dogs.
+      Along with the seated Artemis, the vase depicts Lissa ("rage") siccing the dogs on Actaeon and seated Aphrodite,
+      whose son - Eros - is trying to draw the mother's attention to what is happening. Above is a rare myth about the
+      rape of the son of king Pelops young Chrysippus by the future father of Oedipus kink Laius, who was teaching
+      Chrysippus to ride a chariot. Kidnapping by death dressed as a foreigner occurs at night: five stars shine (now
+      faded), but Pelops (as a descendant of Asia Minor, dressed in an eastern outfit) catches up with the kidnapper and
+      grabs his son by the hand. Another symbol of salvation can be seen on the neck of the amphora - Zeus having taken
+      the shape of an eagle takes a beautiful girl to the heavenly world.
+    </p>
+    <p>The reverse shows the traditional for Apulian funerary vases groups of women and naked young men, bringing each
+      other symbolic gifts: chests, ribbons, branches of sacred trees, wreaths, mirrors. Everything speaks of the
+      posthumous salvation of the soul through love, the union of male and female origins, upon which the cosmos is
+      based.
+
+    </p>
+  </div>
+</section>
+
+{% endblock %}

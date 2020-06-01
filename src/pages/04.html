@@ -1,0 +1,57 @@
+---
+title: Страница предмета
+description: межмузейный проект ДВАЖДЫ СПАСЕННЫЕ
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "04-eng" %}
+{% set id = "04" %}
+{% extends "../templates/layouts/_layout.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--vertical">
+
+  <div class="before-after" style="max-width: 517px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[3].id }}/{{ tests.list[3].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[3].id }}/{{ tests.list[3].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[2].id }}.html" class="arrows__link"><img src="img/left-arrow.svg" width="50" alt=""></a>
+        <a href="{{ tests.list[4].id }}.html" class="arrows__link"><img src="img/right-arrow.svg" width="50" alt=""></a>
+      </div>
+      <h2>{{ tests.list[3].author }}</h2>
+      <h3>{{ tests.list[3].title }}</h3>
+
+      <ul>
+        <li>{{ tests.list[3].place }}</li>
+        <li>Инв. {{ tests.list[3].inv }}</li>
+        <li>{{ tests.list[3].material }}</li>
+        <li>В. {{ tests.list[3].size }} см.</li>
+        <li>{{ tests.list[3].masters }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>Кувшины-ойнохои с трехлепестковым венчиком — одна из наиболее характерных форм греческой расписной керамики. Они
+      использовались не только в быту, но и для проведения обрядов возлияния, в том числе в погребальном ритуале.
+      Кипрские ойнохои архаического времени часто шаровидные, украшены разнообразными аранжировками концентрических
+      кругов, словно движущихся по своей орбите. Они доносят до нас представления древних об одушевленности космоса и
+      его божественных законах — не только законах человеческого мира, но и всего необъятного мироздания, с Луной и
+      Солнцем, планетами и бесчисленными звездными мирами.
+    </p>
+    <p><i>Реставрация</i></p>
+    <p>Ойнохоя склеена из более чем 125 фрагментов. Приблизительно пятая часть поверхности ойнохои была сильно
+      закопчена, а седьмая часть — утрачена. В ходе реставрации фрагменты были очищены от копоти и склеены c
+      восполнением утрат.
+    </p>
+  </div>
+</section>
+
+{% endblock %}

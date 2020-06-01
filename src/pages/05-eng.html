@@ -1,0 +1,64 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "05" %}
+{% set id = "05" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--vertical">
+
+  <div class="before-after-eng" style="max-width: 517px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[4].id }}/{{ tests.list[4].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[4].id }}/{{ tests.list[4].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[3].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[5].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+
+      <h2>{{ tests.list[4].author_eng }}</h2>
+      <h3>{{ tests.list[4].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[4].place_eng }}</li>
+        <li>Inv. {{ tests.list[4].inv_eng }}</li>
+        <li>{{ tests.list[4].material_eng }}</li>
+        <li>H. {{ tests.list[4].size }} см.</li>
+        <li>{{ tests.list[4].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>Painted vases with complex subjects disappeared by the end of the 4th century BC, when the independent Ellada
+      fell. After that they existed for about a century, but the paintings became modest and unpretentious. However, in
+      some examples the décor reaches perfection and elegance, as shown by this large black lacquered krater - a vessel
+      for men's night feasts -symposiums.
+    </p>
+    <p>In the centre of the body the krater is decorated with an ivy branch with carved leaves and twisted tendrils -
+      the symbol of the grape god Dionysus, in honour of whom mysteries were held all over Greece, Asia Minor and Italy
+      - a lifetime initiation to the death of the god to gain hope for future revival. The painting is made with white
+      paint and diluted varnish and blends well with the narrow belt of sheep on the rim; the combination of the shiny
+      surface of the vase with the matte painting creates a peculiar effect. Modesty and minimalism of the decor
+      emphasizes the monumental appearance and expressive form of the feast vase.
+
+    </p>
+    <p><i>Conservation</i></p>
+    <p>The krater is glued together from numerous fragments (over 60), the losses were filled and tinted. The colour is
+      partially altered by the high temperature. There are chips and surface damages.</p>
+  </div>
+</section>
+
+{% endblock %}

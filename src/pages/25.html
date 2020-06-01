@@ -1,0 +1,56 @@
+---
+title: Страница предмета
+description: межмузейный проект ДВАЖДЫ СПАСЕННЫЕ
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "25-eng" %}
+{% set id = "25" %}
+{% extends "../templates/layouts/_layout.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--vertical">
+
+  <div class="before-after" style="max-width: 517px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[24].id }}/{{ tests.list[24].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[24].id }}/{{ tests.list[24].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[23].id }}.html" class="arrows__link"><img src="img/left-arrow.svg" width="50" alt=""></a>
+        <a href="{{ tests.list[25].id }}.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+      <h2>{{ tests.list[24].author }}</h2>
+      <h3>{{ tests.list[24].title }}</h3>
+
+      <ul>
+        <li>{{ tests.list[24].place }}</li>
+        <li>Инв. {{ tests.list[24].inv }}</li>
+        <li>{{ tests.list[24].material }}</li>
+        <li>{{ tests.list[24].size }} см.</li>
+        <li>{{ tests.list[24].masters }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>Статуэтка, изображающая пленного раба, была приобретена Вильгельмом фон Боде в Лондоне в 1895 году, где до этого
+      впервые привлекла его внимание после выставки из частных собраний, состоявшейся в 1879 году. Опубликованная им в
+      том же 1895 году, статуэтка прочно вошла в корпус работ Бертольдо ди Джованни (1420 - 1491), продолжая упоминаться
+      в посвященной ему литературе и после своего исчезновения в 1945 году. Композиция, изображающая молодого человека в
+      неловкой позе и с кандалами на ногах, вызывает вопросы и не может быть определена однозначно, неясен также точный
+      смысл предмета, который герой держит в руке. Высказывались мнения о том, что статуэтка могла быть частью
+      несохранившейся пары. </p>
+
+    <p><i>Реставрация</i></p>
+    <p>Определен состав металла. Проведена очистка и укрепление поверхности.</p>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,67 @@
+---
+title: Страница предмета
+description: межмузейный проект ДВАЖДЫ СПАСЕННЫЕ
+width: 566
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "01-eng" %}
+{% set id = "01" %}
+{% extends "../templates/layouts/_layout.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--vertical">
+
+  <div class="before-after" style="max-width: {{ tests.list[0].width }}px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[0].id }}/{{ tests.list[0].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[0].id }}/{{ tests.list[0].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+      <div class="arrows">
+        <a href="{{ tests.list[29].id }}.html" class="arrows__link"><img src="img/left-arrow.svg" width="50" alt=""></a>
+        <a href="{{ tests.list[1].id }}.html" class="arrows__link"><img src="img/right-arrow.svg" width="50" alt=""></a>
+
+        <a class="popup-youtube"
+          href="https://sketchfab.com/models/d15f0d1e32f34c5ca20d76c54bc18b70/embed?preload=1&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1"><img
+            src="img/video_play_lines.svg" width="50"></a>
+
+        <a href="http://www.museumconservation.ru/data/specprojects/amfora/story_2.html" target="_blank"><img
+            src="img/amfora.svg" width="50"></a>
+      </div>
+      <h2>{{ tests.list[0].author }}</h2>
+      <h3>{{ tests.list[0].title }}</h3>
+
+      <ul>
+        <li>{{ tests.list[0].place }}</li>
+        <li>Инв. {{ tests.list[0].inv }}</li>
+        <li>{{ tests.list[0].material }}</li>
+        <li>В. {{ tests.list[0].size }} см.</li>
+        <li>{{ tests.list[0].masters }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>Монументальная амфора панафинейского типа была найдена в XIX веке в Челье-дель-Кампо в Южной Италии, на
+      территории современной Апулии. Там в одной из гробниц нашли несколько роскошных ваз одного из последних великих
+      вазописцев Греции — мастера Дария (назван по знаменитому кратеру в Неаполе с изображением совета персидского царя
+      и обозначенным именем «DAREIOS»).
+    </p>
+    <p>Тулово сосуда разделено надвое центральным поясом с изображением пар противостоящих зверей и фантастических
+      существ. Внизу изображена популярная в Италии сцена наказания Актеона — беотийского охотника, подсмотревшего
+      полдневное купание богини охоты. Артемида превратила Актеона в оленя, которого растерзали собственные псы. Наряду
+      с сидящей Артемидой изображены науськивающая псов Лисса («ярость») и сидящая Афродита, сын которой — Эрот —
+      пытается привлечь внимание матери к происходящему. Вверху представлен редкий миф о похищении фиванским царевичем
+      Лаем, будущим отцом Эдипа, сына царя Пелопса — юного Хрисиппа, которого Лай наставлял в деле управления
+      колесницей. Похищение смертью в образе иноземца происходит ночью: горят пять звезд (ныне стерты), но Пелопс (как
+      выходец из Малой Азии, облачен в восточный наряд) догоняет похитителя и хватает сына за руку. Еще один символ
+      спасения виден на шейке амфоры — Зевс-орел уносит в небесный мир прекрасную девушку.
+    </p>
+  </div>
+</section>
+
+{% endblock %}

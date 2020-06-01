@@ -1,0 +1,58 @@
+---
+title: Страница предмета
+description: межмузейный проект ДВАЖДЫ СПАСЕННЫЕ
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "07-eng" %}
+{% set id = "07" %}
+{% extends "../templates/layouts/_layout.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--vertical">
+
+  <div class="before-after" style="max-width: 517px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[6].id }}/{{ tests.list[6].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[6].id }}/{{ tests.list[6].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[5].id }}.html" class="arrows__link"><img src="img/left-arrow.svg" width="50" alt=""></a>
+        <a href="{{ tests.list[7].id }}.html" class="arrows__link"><img src="img/right-arrow.svg" width="50" alt=""></a>
+      </div>
+      <h2>{{ tests.list[6].author }}</h2>
+      <h3>{{ tests.list[6].title }}</h3>
+
+      <ul>
+        <li>{{ tests.list[6].place }}</li>
+        <li>Инв. {{ tests.list[6].inv }}</li>
+        <li>{{ tests.list[6].material }}</li>
+        <li>В. {{ tests.list[6].size }} см.</li>
+        <li>{{ tests.list[6].masters }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>Стамносы, большие сосуды для вина, часто использовались в ритуалах умирающего и воскресающего бога Диониса,
+      покровителя вина и винограда. С V века до н. э. их стали изготавливать по заказу богатых этрусков. Данный сосуд
+      был найден в одной из этрусских гробниц. Изображена сцена из мифа об Агамемноне, предводителе троянского похода
+      греков, убитого по возвращении домой его женой Клитемнестрой (сестрой Елены Прекрасной) и ее любовником Эгисфом.
+      За отца мстят его сын Орест (убивает мечом сидящего на троне Эгисфа) и дочь Электра (бежит с топором вслед за
+      Орестом). Трагическая тема часто звучала в греческом театре: Эсхил поставил на празднике Диониса в Афинах трилогию
+      «Орестея» (458 до н. э.); позднее этой теме отдали дань и Софокл с Еврипидом. Стамнос расписан Копенгагенским
+      мастером, умело сочетавшим драматизм сцены с тонкой трактовкой фигур героев и их облачений. </p>
+    <p>Сосуд служил для возлияний — в донце имеется отверстие. </p>
+    <p><i>Реставрация</i></p>
+    <p>Склеен из фрагментов с многочисленными восполнениями. Задняя сторона была реставрирована в XIX веке и частично
+      записана.
+    </p>
+  </div>
+</section>
+
+{% endblock %}

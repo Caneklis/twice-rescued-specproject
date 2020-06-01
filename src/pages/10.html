@@ -1,0 +1,60 @@
+---
+title: Страница предмета
+description: межмузейный проект ДВАЖДЫ СПАСЕННЫЕ
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "10-eng" %}
+{% set id = "10" %}
+{% extends "../templates/layouts/_layout.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--horizontal">
+
+  <div class="before-after">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[9].id }}/{{ tests.list[9].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[9].id }}/{{ tests.list[9].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[8].id }}.html" class="arrows__link"><img src="img/left-arrow.svg" width="50" alt=""></a>
+        <a href="{{ tests.list[10].id }}.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+      <h2>{{ tests.list[9].author }}</h2>
+      <h3>{{ tests.list[9].title }}</h3>
+
+      <ul>
+        <li>{{ tests.list[9].place }}</li>
+        <li>Инв. {{ tests.list[9].inv }}</li>
+        <li>{{ tests.list[9].material }}</li>
+        <li>В. {{ tests.list[9].size }} см.</li>
+        <li>{{ tests.list[9].masters }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>В древней Италии и Риме со II века до н. э. по II век н. э. было принято украшать здания терракотовыми рельефами
+      с разными сюжетами — сначала только снаружи, а потом и внутри. Они получили название по имени их первого
+      коллекционера и исследователя — маркиза Джанпьетро Кампана. Мифологические, символические и жанровые сцены
+      компоновались в общих поясах. Данная плита с редким и удивительным сюжетом изображает греческую палестру (площадку
+      для атлетических тренировок), огороженную храмами и уставленную памятниками победоносных атлетов. В центре —
+      статуя Геракла в львиной шкуре и с палицей. По сторонам: слева — фигуры кулачных бойцов; справа — победителей в
+      состязаниях, в них в вольной передаче узнаются шедевры греческих ваятелей — «Апоксиомен» Лисиппа (атлет, счищающий
+      с тела песок) и «Диадумен» Поликлета (атлет, венчающий себя победной повязкой). Рельеф был тонко подцвечен красной
+      и желтой красками.
+    </p>
+    <p><i>Реставрация</i></p>
+    <p>Рельеф склеен из четырех крупных кусков с оббитыми краями и повреждениями. Раскраска была скрыта под слоем
+      загрязнений. Утрачен фронтон и формы по верхнему краю.
+    </p>
+  </div>
+</section>
+
+{% endblock %}

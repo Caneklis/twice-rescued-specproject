@@ -1,0 +1,57 @@
+---
+title: Страница предмета
+description: межмузейный проект ДВАЖДЫ СПАСЕННЫЕ
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "09-eng" %}
+{% set id = "09" %}
+{% extends "../templates/layouts/_layout.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--vertical">
+
+  <div class="before-after" style="max-width: 517px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[8].id }}/{{ tests.list[8].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[8].id }}/{{ tests.list[8].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[7].id }}.html" class="arrows__link"><img src="img/left-arrow.svg" width="50" alt=""></a>
+        <a href="{{ tests.list[9].id }}.html" class="arrows__link"><img src="img/right-arrow.svg" width="50" alt=""></a>
+      </div>
+      <h2>{{ tests.list[8].author }}</h2>
+      <h3>{{ tests.list[8].title }}</h3>
+
+      <ul>
+        <li>{{ tests.list[8].place }}</li>
+        <li>Инв. {{ tests.list[8].inv }}</li>
+        <li>{{ tests.list[8].material }}</li>
+        <li>В. {{ tests.list[8].size }} см.</li>
+        <li>{{ tests.list[8].masters }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>В древности на Ближнем Востоке были широко известны изображения богинь со спиральными локонами, ниспадающими на
+      плечи. К таким божествам принадлежит не только египетская Хатхор, но также Астарта и Анат, которым поклонялись в
+      Леванте. Так изображалась и кипрская Великая мать (позднее будет называться Афродитой), в том числе на подвесных
+      плитах. Как предполагают исследователи, их крепили в качестве дара на стены святилищ. В руке богини, видимо, был
+      ныне утраченный крупный цветок, как в похожей статуэтке в собрании Лувра. Подвесная плита из коллекции ГМИИ
+      уникальна не только редкой иконографией, но и прекрасно сохранившейся росписью.
+    </p>
+    <p><i>Реставрация</i></p>
+    <p>Реставрация памятника проходила в несколько этапов. В 2004 году плита была очищена и склеена В. И. Черемхиным. В
+      2014-м в ходе подготовки выставки «Искусство Древнего Кипра» Д. А. Калиничеву удалось обнаружить два фрагмента
+      правой руки, которые затем были подклеены Ю. Н. Устиновой.
+    </p>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,59 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "22" %}
+{% set id = "22" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--vertical">
+
+  <div class="before-after-eng" style="max-width: 517px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[21].id }}/{{ tests.list[21].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[21].id }}/{{ tests.list[21].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[20].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[22].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+      <h2>{{ tests.list[21].author_eng }}</h2>
+      <h3>{{ tests.list[21].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[21].place_eng }}</li>
+        <li>Inv. {{ tests.list[21].inv_eng }}</li>
+        <li>{{ tests.list[21].material_eng }}</li>
+        <li>{{ tests.list[21].size }} cm.</li>
+        <li>{{ tests.list[21].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>This Saint Jerome was acquired by the Berlin Museums in 1895 together with a collection of Italian bronze
+      belonged to the English collector of a German origin Henry Pfungst. The collection was acquired on the initiative
+      of Wilhelm von Bode, who published this work and attributed it to the Florentine sculptor Bertoldo di Giovanni (c.
+      1440-1491). Bertoldo, who studied with Donatello and was, in turn, a teacher of Michelangelo, occupied an
+      important intermediate place in the history of Florentine sculpture. In addition, Bertoldo was the curator of the
+      collection of antique sculptures owned by Lorenzo the Magnificent. Wilhelm von Bode devoted a whole monograph to
+      the work of Bertoldo, published in 1925. After WWII, the attribution of the statuette to Bertoldo was generally
+      accepted. More recently, James Draper (1992) expressed some doubts about it, suggesting with caution that the
+      statuette should be considered the work of a Florentine sculptor of ca. 1500.
+    </p>
+    <p><i>Conservation</i></p>
+    <p>The metal composition was determined. The surface was cleaned and consolidated. </p>
+  </div>
+</section>
+
+{% endblock %}

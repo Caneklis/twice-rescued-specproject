@@ -1,0 +1,71 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "03" %}
+{% set id = "03" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card">
+
+  <div class="before-after-eng" style="max-width: 517px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[2].id }}/{{ tests.list[2].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[2].id }}/{{ tests.list[2].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[1].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[3].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+
+      <h2>{{ tests.list[2].author_eng }}</h2>
+      <h3>{{ tests.list[2].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[2].place_eng }}</li>
+        <li>Inv. {{ tests.list[2].inv_eng }}</li>
+        <li>{{ tests.list[2].material_eng }}</li>
+        <li>H. {{ tests.list[2].size }} см.</li>
+        <li>{{ tests.list[2].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>In Etruria vase red-figure painting appeared only in the 5th century BC under the influence of the Greeks.
+      Complex pottery technique at first was simply imitated - on the black walls of the vase red figures were painted
+      (in the Greek vases, they were made by leaving parts of the clay unvarnished). The paintings as a whole were not
+      as elegant and thematically varied as in Athens, but they are still interesting and introduce to us unknown
+      Etruscan rituals and myths.The keleba from Orvieto, an important art centre of Northern Etruria, is a variation of
+      a Greek krater with column-like handles, a vessel for mixing wine with water. The keleba has a stocky body and a
+      wide, heavy neck painted with mesh rhombuses. The elegant Greek palmettes on the sides are reduced to large simple
+      leaves, between which there are two compositions. The front side shows a young god flying on a swan, holding in
+      his hand a long tenia - a ritual ribbon (a symbol of connection, restoration of life). This is most likely Aplu
+      (Etruscan Apollo) flying to or from Hyperborean country for winter. On the reverse side is a large head of a deity
+      crowned with a wreath (in profile) holding a tree in his hand. Both compositions are found in the Greek example,
+      but made in an original way. The figure of the swan, which is absent on the vase, is preserved on a sample from
+      the Ancient collection of the State Museums of Berlin.
+    </p>
+    <p>The vessel came in many fragments, partially covered with soot, with some loss on the front side. The lower part
+      of one handle was also lost.
+    </p>
+    <p><i>Conservation</i></p>
+    <p>The keleba was found in fragments, some fragments were badly burned, the image was not visible and it was
+      difficult to determine whether the fragments belonged to the same vase. After cleaning and gluing the shards, the
+      lost fragments on the body were filled and the lower part of the left handle was restored based on the right
+      handle. The fillings were tinted to resemble the colour of the shards so as not to disturb the perception of the
+      vessel's shape.</p>
+  </div>
+</section>
+
+{% endblock %}

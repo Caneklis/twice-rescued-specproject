@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="wrapper">
+
+  </div>
+
+  <style>
+    body {
+      margin: 0;
+      background: #9D8C7E url('img/main-bg.jpg') no-repeat center top;
+      background-attachment: fixed;
+      /* margin: 0; padding: 0; */
+      text-align: center;
+    }
+
+    canvas {
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  </style>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.1.266/pdf_viewer.css" rel="stylesheet" />
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.1.266/pdf.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.1.266/pdf_viewer.js"></script>
+  <script src="//cdn.polyfill.io/v2/polyfill.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.js"></script>
+  <script>
+    'use strict';
+
+    if (!pdfjsLib.getDocument || !pdfjsViewer.PDFViewer) {
+      alert("Please build the pdfjs-dist library using\n" +
+        "  `gulp dist-install`");
+    }
+
+    var url = 'pdf/publication-2-eng.pdf';
+
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      '//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.1.266/pdf.worker.js';
+
+    var loadingTask = pdfjsLib.getDocument(url);
+    loadingTask.promise.then(function (pdf) {
+      // please be aware this uses .range() function from lodash
+      var pagePromises = _.range(1, pdf.numPages).map(function (number) {
+        return pdf.getPage(number);
+      });
+      return Promise.all(pagePromises);
+    }).then(function (pages) {
+        var scale = 2;
+        var canvases = pages.forEach(function (page) {
+          var viewport = page.getViewport({
+            scale: scale,
+          }); // Prepare canvas using PDF page dimensions
+
+          var canvas = document.createElement('canvas');
+          canvas.height = viewport.height;
+          canvas.width = viewport.width; // Render PDF page into canvas context
+
+          var canvasContext = canvas.getContext('2d');
+          var renderContext = {
+            canvasContext: canvasContext,
+            viewport: viewport
+          };
+          page.render(renderContext).promise.then(function () {
+            if (false)
+              return console.log('Page rendered');
+          });
+          document.getElementById('wrapper').appendChild(canvas);
+        });
+      },
+      function (error) {
+        return console.log('Error', error);
+      });
+  </script>
+</body>
+
+</html>

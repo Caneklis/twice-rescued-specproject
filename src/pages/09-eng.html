@@ -1,0 +1,60 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "09" %}
+{% set id = "09" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--vertical">
+
+  <div class="before-after-eng" style="max-width: 517px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[8].id }}/{{ tests.list[8].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[8].id }}/{{ tests.list[8].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[7].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[9].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+
+      <h2>{{ tests.list[8].author_eng }}</h2>
+      <h3>{{ tests.list[8].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[8].place_eng }}</li>
+        <li>Inv. {{ tests.list[8].inv_eng }}</li>
+        <li>{{ tests.list[8].material_eng }}</li>
+        <li>H. {{ tests.list[8].size }} cm.</li>
+        <li>{{ tests.list[8].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>In ancient times in the Middle East the images of goddesses with spiral curls falling on their shoulders were
+      widely known. Such deities include not only Egyptian Hathor, but also Astarte and Anat, who were worshipped in the
+      Levant. This is how the Cyprus Great Mother (later to be called Aphrodite) was depicted, including on wall
+      brackets. According to the researchers, they were fastened to the walls of the sanctuaries as gifts. In the hand
+      of the goddess, there was probably a large flower now lost, like in a similar statue in the Louvre collection. The
+      wall bracket from the Pushkin State collection is unique not only because of its rare iconography, but also
+      because of its wonderfully preserved paintings.
+    </p>
+    <p><i>Conservation</i></p>
+    <p>The treatments took place in several stages. In 2004, the bracket was cleaned and glued by V. Cheremkhin. In
+      2014, during the preparation of the exhibition "The Art of Ancient Cyprus", D. Kalinichev managed to find two
+      fragments of the right hand, which were then attached to the bracket by J. Ustinova.</p>
+  </div>
+</section>
+
+{% endblock %}

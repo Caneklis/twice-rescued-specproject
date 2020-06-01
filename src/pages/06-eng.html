@@ -1,0 +1,62 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "06" %}
+{% set id = "06" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--vertical">
+
+  <div class="before-after-eng" style="max-width: 517px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[5].id }}/{{ tests.list[5].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[5].id }}/{{ tests.list[5].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[4].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[6].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+
+      <h2>{{ tests.list[5].author_eng }}</h2>
+      <h3>{{ tests.list[5].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[5].place_eng }}</li>
+        <li>Inv. {{ tests.list[5].inv_eng }}</li>
+        <li>{{ tests.list[5].material_eng }}</li>
+        <li>H. {{ tests.list[5].size }} cm.</li>
+        <li>{{ tests.list[5].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>Bucchero vases (made from clay that acquired a specific dark colour after firing, which made the vessels look
+      like bronze) were created during the heyday of Etruria ( 7th - 6th centuries BC) for funeral purposes. They were
+      notable for their large size, expressive silhouette and rich decoration. This amphora has two relief belts on the
+      body, which separate the scenes. The lower part shows a procession of riders, an elite part of society to which
+      the deceased could belong. The upper part is decorated with convex elements. The neck on both sides has ebossed
+      heads of a goddess with hairs up to her shoulders, and on the rim there are four similar heads, but smaller in
+      size. The goddess is clearly related to the ritual of death and rebirth, she is a patron of cosmic life. The now
+      lost lid of the vessel was probably decorated with a figure of a rooster - the bird of the sun, messenger of dawn,
+      as a symbol of new life.
+    </p>
+    <p><i>Conservation</i></p>
+    <p>The amphora is reassembled from large fragments with tinted filled in losses. Before restoration, the clay was
+      damp and dirty, attachments with heads were falling off.
+    </p>
+  </div>
+</section>
+
+{% endblock %}

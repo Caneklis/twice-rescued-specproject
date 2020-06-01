@@ -1,0 +1,60 @@
+---
+title: Страница предмета
+description: межмузейный проект ДВАЖДЫ СПАСЕННЫЕ
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "02-eng" %}
+{% set id = "02" %}
+{% extends "../templates/layouts/_layout.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--horizontal">
+
+  <div class="before-after">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[1].id }}/{{ tests.list[1].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[1].id }}/{{ tests.list[1].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[0].id }}.html" class="arrows__link"><img src="img/left-arrow.svg" width="50" alt=""></a>
+        <a href="{{ tests.list[2].id }}.html" class="arrows__link"><img src="img/right-arrow.svg" width="50" alt=""></a>
+      </div>
+      <h2>{{ tests.list[1].author }}</h2>
+      <h3>{{ tests.list[1].title }}</h3>
+
+      <ul>
+        <li>{{ tests.list[1].place }}</li>
+        <li>Инв. {{ tests.list[1].inv }}</li>
+        <li>{{ tests.list[1].material }}</li>
+        <li>В. {{ tests.list[1].size }} см.</li>
+        <li>{{ tests.list[1].masters }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>Динос — принадлежность греческих пиров, в нем смешивали вино с водой (чаще всего в пропорциях от 1:3 до 1:10).
+      Большой сосуд с круглым донцем устанавливали на высокой подставке. Из него виночерпии брали вино и разносили его
+      мужчинам — участникам ночных пиров (симпосиастам). Сосуд был создан в период ориентализма (VII — начало VI века до
+      н. э.), когда Греция заимствовала многие мотивы и формы декора на Востоке. К ним относятся и сфинги — крылатые
+      львы с женской головой. На сосуде — две сфинги, помещенные на фасе и реверсе в центральных панелях и отделенные
+      сериями частых пурпурных лучей. Эти лучи отвечают более редким и крупным лучам, идущим от донца вазы. Средняя
+      часть диноса украшена тройным поясом черных и пурпурных линий, что хорошо гармонирует со светлым,
+      желтовато-кремовым покрытием стенок сосуда. Форма вазы элегантна и сдержанна, рисунок отличается точностью и
+      изяществом.
+    </p>
+    <p><i>Реставрация</i></p>
+    <p>Сосуд склеен из многочисленных, очищенных от грязи и копоти фрагментов, с тонированными
+      дополнениями. Первоначально динос имел две маленькие ручки, одна из которых была идентифицирована уже после
+      восстановления памятника.
+    </p>
+  </div>
+</section>
+
+{% endblock %}

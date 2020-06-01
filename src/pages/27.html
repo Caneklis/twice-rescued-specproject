@@ -1,0 +1,57 @@
+---
+title: Страница предмета
+description: межмузейный проект ДВАЖДЫ СПАСЕННЫЕ
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "27-eng" %}
+{% set id = "27" %}
+{% extends "../templates/layouts/_layout.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--horizontal">
+
+  <div class="before-after">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[26].id }}/{{ tests.list[26].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[26].id }}/{{ tests.list[26].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[25].id }}.html" class="arrows__link"><img src="img/left-arrow.svg" width="50" alt=""></a>
+        <a href="{{ tests.list[27].id }}.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+      <h2>{{ tests.list[26].author }}</h2>
+      <h3>{{ tests.list[26].title }}</h3>
+
+      <ul>
+        <li>{{ tests.list[26].place }}</li>
+        <li>Инв. {{ tests.list[26].inv }}</li>
+        <li>{{ tests.list[26].material }}</li>
+        <li>{{ tests.list[26].size }} см.</li>
+        <li>{{ tests.list[26].masters }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>Этот небольшой бронзовый детский бюст, типологически близкий целому ряду популярных в XV в. мраморных изображений
+      Младенца Христа и Св. Иоанна Крестителя, поступил в музеи Берлина в 1903 г., из собрания принцессы Виктории, вдовы
+      Кайзера Фридриха III. Опубликовавший его незадолго до приобретения Вильгельм фон Боде был убежден, что автором
+      скульптуры является прославленный флорентийский скульптор Антонио Росселино (ок. 1427- 1478), и считал, тем самым,
+      бюст его единственной сохранившейся работой в бронзе. Однако технические особенности отливки не позволяют отнести
+      произведение к эпохе Возрождения. К сожалению, как обнаружил в 1967 году итальянский ученый Франческо Негри
+      Арнольди, бронзовый вариант - всего лишь небрежная копия с мраморного оригинала, ныне находящегося в Музее Гетти,
+      США, и приписывающегося Дезидерио да Сеттиньяно (ок. 1428- 1464).
+    </p>
+    <p><i>Реставрация</i></p>
+    <p>Определен состав металла. Проведена очистка и укрепление поверхности.</p>
+  </div>
+</section>
+
+{% endblock %}

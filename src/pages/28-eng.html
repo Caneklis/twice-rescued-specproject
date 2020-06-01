@@ -1,0 +1,61 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "28" %}
+{% set id = "28" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--horizontal">
+
+  <div class="before-after-eng">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[27].id }}/{{ tests.list[27].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[27].id }}/{{ tests.list[27].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[26].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[28].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+      <h2>{{ tests.list[27].author_eng }}</h2>
+      <h3>{{ tests.list[27].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[27].place_eng }}</li>
+        <li>Inv. {{ tests.list[27].inv_eng }}</li>
+        <li>{{ tests.list[27].material_eng }}</li>
+        <li>В. {{ tests.list[27].size }} cm.</li>
+        <li>{{ tests.list[27].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>The two unusual both in the form and subject bronze objects were acquired for the museums of Berlin in 1935 from
+      the collection of Albert Figdor, one of the largest Viennese art collectors. Attributed earlier to the Padua
+      sculptor Andrea Riccio, now they are considered the work of another master from Padua, Agostino Zoppo (1515-1572),
+      who served as a foundry under Jacopo Sansovino, the chief sculptor of Venice in the 16th century. Each of them
+      depicts the gates of the underground kingdom of Hades, inspired by Ovid's Metamorphosis, which described in detail
+      the tortures of the inhabitants of Tartarus, seen by descending Juno. A considerable number of mythological
+      characters (Sisyphus, Tantalus, Titius and others) inhabit a gloomy landscape, giving it a phantasmagoric
+      character. In the inventory of Zoppo's workshop, compiled after his death, two pairs of similar sculptures are
+      mentioned. Two more similar works are now in the collection of the Victoria and Albert Museum, London. The holes
+      in their upper part give reason to assume that they could be used as censers.
+    </p>
+    <p><i>Conservation</i></p>
+    <p>The metal composition was determined. The surface was cleaned and consolidated.
+    </p>
+  </div>
+</section>
+
+{% endblock %}

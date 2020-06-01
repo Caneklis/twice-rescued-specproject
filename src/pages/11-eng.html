@@ -1,0 +1,66 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "11" %}
+{% set id = "11" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--vertical">
+
+  <div class="before-after-eng" style="max-width: 517px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[10].id }}/{{ tests.list[10].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[10].id }}/{{ tests.list[10].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[9].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[11].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+
+      <h2>{{ tests.list[10].author_eng }}</h2>
+      <h3>{{ tests.list[10].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[10].place_eng }}</li>
+        <li>Inv. {{ tests.list[10].inv_eng }}</li>
+        <li>{{ tests.list[10].material_eng }}</li>
+        <li>H. {{ tests.list[10].size }} cm.</li>
+        <li>{{ tests.list[10].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>Among the famous oracles of Greece, one of the oldest was the sanctuary in Dodon, located in the region of Epirus
+      in the northwest Balkans. Originally the goddess of this area was the mother goddess of fertility, later known as
+      Diona, but already in Mycenaean time (the second half of the 2nd millennium BC) the Greek cult of Zeus was
+      established here, which existed almost until the end of the classical era. At the end of the IV century BC the
+      sacred oak, a form in which Zeus and his goddess wife were revered, was cut down and the sanctuary ceased to
+      exist.
+    </p>
+    <p>In the last quarter of the 19th century, a statue was found during excavations in Dodon, presumably depicting
+      Zeus. His youthful slender figure was put in the classical pose of a standing athlete. It is filled with harmony
+      and tranquillity, while at the same time being distinguished by the virtuoso precision of its anatomy, combined
+      with an unusually complex and subtle nuance of details. The regal image of God appears here more sublime and
+      poetically inspired than formidable and majestic. The statue of "Zeus of Dodon" undoubtedly belongs to the best
+      works of Greek bronze sculpture that have survived to this day. It is believed to be part of the influence of one
+      of the last great sculptors of Greece - Lysippos, who worked in the second half of the 4th century BC.
+    </p>
+    <p><i>Conservation</i></p>
+    <p>In 2004, the monument was cleared of the surface buildup. Later, the foot of the right leg was found, in 2018,
+      during the conservation treatments the fragment was attached to the statue.</p>
+  </div>
+</section>
+
+{% endblock %}

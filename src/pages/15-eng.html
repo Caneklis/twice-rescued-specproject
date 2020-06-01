@@ -1,0 +1,61 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "15" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--horizontal">
+
+  <div class="before-after-eng" style="max-width: 800px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[14].id }}/{{ tests.list[14].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[14].id }}/{{ tests.list[14].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[13].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[15].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+      <h2>{{ tests.list[14].author_eng }}</h2>
+      <h3>{{ tests.list[14].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[14].place_eng }}</li>
+        <li>Inv. {{ tests.list[14].inv_eng }}</li>
+        <li>{{ tests.list[14].material_eng }}</li>
+        <li>{{ tests.list[14].size }} cm.</li>
+        <li>{{ tests.list[14].fact_eng }}</li>
+        <li>{{ tests.list[14].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>Long thought to have come from the old collection of Electors of Brandenburg, the so-called Kunstkammer, this
+      plaquette was indeed exchanged – willingly or not – with another one acquired by Wilhelm von Bode for the Museum
+      of Strasbourg. Published as Donatello's work in pre-war literature, the plaquette is iconographically and formally
+      associated with two works of Donatello’s immediate circle: an autograph terracotta relief from the Victoria and
+      Albert Museum (called the Forzori Altar) and a drawing from the Galleria degli Uffizi, Florence (sometimes
+      attributed to the young Giovanni Bellini). Horst Janson (1957) rejected the attribution to Donatello, seeing
+      however a profound influence of the late Donatello style of the Paduan period, and dating the work in the 1460s.
+      The two other versions of the plaquette, the cited one in Strasbourg and another one in the Musée du Louvre,
+      Paris, have some differences in style and raise the question of the comparative dating of these objects.</p>
+    <p><i>Conservation</i></p>
+    <p>In the mid-1950s, the plaquette was cleaned. In 2019, the lost fragment was attached, the surface was patinated
+      and conserved.</p>
+  </div>
+
+</section>
+
+{% endblock %}

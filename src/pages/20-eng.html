@@ -1,0 +1,67 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "20" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card">
+
+  <div class="before-after-eng">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[19].id }}/{{ tests.list[19].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[19].id }}/{{ tests.list[19].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[18].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[20].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+      <h2>{{ tests.list[19].author_eng }}</h2>
+      <h3>{{ tests.list[19].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[19].place_eng }}</li>
+        <li>Inv. {{ tests.list[19].inv_eng }}</li>
+        <li>{{ tests.list[19].material_eng }}</li>
+        <li>{{ tests.list[19].fact_eng }}</li>
+        <li>{{ tests.list[19].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>Wilhelm von Bode acquired the bust of a young woman for the Berlin Museums in Florence, in 1877. The deal to buy
+      the bust from the old Florentine family of Strozzi was a notable event facilitated by Stefano Bardini.
+    </p>
+    <p>From the moment it was found at the Strozzi family countryside residence, the bust was surrounded by myths and
+      legends – It was seen as the very same portrait of Marietta Strozzi by Desiderio de Settignano described by
+      Giorgio Vasari in "Lives...".</p>
+    <p>In 1888, Bode changed the attribution of the piece, as he thought it to belong to a Dalmatian sculptor Francesco
+      Laurana who worked in Naples, whose female portraits ( in Vienna, Palermo, Florence and New York) are very similar
+      to this one.</p>
+    <p>Very popular at the time, the Berlin bust is known for its many copies and reproductions produced even after it
+      was damaged in 1945.</p>
+    <p>Today, the bust is split into two pieces between the museum collections in Moscow and Berlin, yet its attribution
+      still is as contradictory as before. Research by Chrissa Damianaki published in 2000 cast doubt on the
+      authenticity of this and several other busts attributed to Francesco Laurana. That point of view supported by some
+      leading museum specialists (Anthony Radcliffe, Volker Crane), was refused by other well-known art historians (John
+      Pope-Hennessy, Hanno-Walter Kruft, Francesco Calti) and still is not generally accepted.</p>
+    <p><i>Conservation</i></p>
+    <p>After the war, parts of this sculpture ended up in different countris: the torst in the Pushkin State Museum in
+      Moscow, and the head in Bode Museum in Berlin. Colleagues from Berlin gave The Pushkin Museum a plaster copy of
+      the princess’ head. The torso was badly damaged in the fire. </p>
+  </div>
+</section>
+
+{% endblock %}

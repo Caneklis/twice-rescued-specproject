@@ -1,0 +1,23 @@
+{% import "../data/menu.html" as items %}
+
+<nav class="main-nav">
+  <!-- <a href="{{page_lang_link}}.html" class="lang">Russian</a> -->
+  <ul class="main-nav__list">
+    {% for item in items.menu %}
+    <li class="main-nav__item {% if page_title == item.menu_link %} main-nav__item--active{% endif %}"">
+        <a href=" {{item.menu_link_eng}}.html" class="main-nav__link">{{ item.menu_item_eng }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <ul class="social">
+    <li class="social__item"><a href="#" class="social__item-link"><img src="img/fb-icon.svg" alt="facebook page icon"
+          width="45" height="45"><span class="visually-hidden">facebook page</span></a></li>
+    <li class="social__item"><a href="#" class="social__item-link"><img src="img/yt-icon.svg" alt="Youtube chanel icon"
+          width="45" height="45"><span class="visually-hidden">Youtube chanel</span></a></li>
+  </ul>
+
+  <a href="http://museumconservation.ru/?lang=en" class="main-nav__back-link">Back to the Department of
+    Conservation
+    website</a>
+</nav>

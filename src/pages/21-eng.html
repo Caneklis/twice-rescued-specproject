@@ -1,0 +1,56 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "21" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--horizontal">
+
+  <div class="before-after-eng">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[20].id }}/{{ tests.list[20].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[20].id }}/{{ tests.list[20].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[19].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[21].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+      <h2>{{ tests.list[20].author_eng }}</h2>
+      <h3>{{ tests.list[20].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[20].place_eng }}</li>
+        <li>Inv. {{ tests.list[20].inv_eng }}</li>
+        <li>{{ tests.list[20].material_eng }}</li>
+        <li>{{ tests.list[20].size }} cm.</li>
+        <li>{{ tests.list[20].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>An inkwell depicting a boy wrestling a huge (full-sized) grasshopper hiding in the branches of a tree was donated
+      to the Berlin museums in 1901 by an anonymous donor from Munich. The work is distinguished by an original
+      composition and a complete lack of analogues in museums and private collections. Wilhelm von Bode (1907) suggested
+      an attribution, later endorsed by Leo Planiscig, to the workshop of Andrea Riccio, an important Paduan sculptor
+      famous notably to depict animals and insects in life size using casts from nature. Nowadays, this attribution
+      seems questionable, which does not detract from the artistic merits of this unusual work.
+    </p>
+    <p><i>Conservation</i></p>
+    <p>The metal composition was determined. The surface was cleaned and consolidated. </p>
+  </div>
+</section>
+
+{% endblock %}

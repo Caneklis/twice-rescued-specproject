@@ -1,0 +1,58 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "23" %}
+{% set id = "23" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--horizontal">
+
+  <div class="before-after-eng">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[22].id }}/{{ tests.list[22].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[22].id }}/{{ tests.list[22].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[21].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[23].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+      <h2>{{ tests.list[22].author_eng }}</h2>
+      <h3>{{ tests.list[22].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[22].place_eng }}</li>
+        <li>Inv. {{ tests.list[22].inv_eng }}</li>
+        <li>{{ tests.list[22].material_eng }}</li>
+        <li>{{ tests.list[22].size }} cm.</li>
+        <li>{{ tests.list[22].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>A small bust of a child was purchased by the Berlin museums in 1914 in exchange with the Kassel's Landesmuseum.
+      Its history can be traced back to the XVII century, when the sculpture was in The Hague in the collection of the
+      commander-in-chief of the Dutch fleet, Jacob Banner,Lord of Wassenaer, Lord Obdam. The collection was bought in
+      1750 by William VII, Landgrave of Hesse-Kassel. The sculpture, known in several replicas, was repeatedly
+      re-attributed: Bode, who rejected an implausible version of Vittorio Ghiberti's authorship, tentatively considered
+      it the work of a Florentine sculptor of the late XV century. A significant resemblance to another small piece, a
+      tilted female head attributed to the Venetian sculptor Antonio Lombardi (Modena, Estense Gallery and Berlin, Bode
+      Museum), allows both works to be considered belonging to one workshop.
+    </p>
+    <p><i>Conservation</i></p>
+    <p>The metal composition was determined. The surface was cleaned and consolidated.</p>
+  </div>
+</section>
+
+{% endblock %}

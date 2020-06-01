@@ -1,0 +1,36 @@
+---
+title: Публикации
+description: межмузейный проект ДВАЖДЫ СПАСЕННЫЕ
+---
+{% set page_title = "publications" %}
+{% set page_lang_link = "publications-eng" %}
+{% set id = "30" %}
+{% extends "../templates/layouts/_layout.html" %}
+
+{% block content %}
+
+<section class="publications">
+
+  <ul class="publications__list">
+    <li class="publications__item">
+      <a href="pdf-1.html" class="popup-youtube">
+        <img src="img/author-1.jpeg" alt="">
+        <p>К вопросу об истории произведений скульптуры из фонда перемещенных ценностей хранящихся в ГМИИ им. А.С.
+          Пушкина, 1945-2015</p>
+        <h2>Расторгуев В.А.</h2>
+      </a>
+    </li>
+    <li class="publications__item">
+      <a href="pdf-2.html" class="popup-youtube">
+        <img src="img/author-2.jpeg" alt="">
+        <p>Донателло и две «Мадонны».<br>
+          Краткая история коллекции скульптуры
+          берлинских музеев.</p>
+        <h2>Невилл Роули</h2>
+      </a>
+    </li>
+  </ul>
+
+</section>
+
+{% endblock %}

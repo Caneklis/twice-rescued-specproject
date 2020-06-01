@@ -1,0 +1,60 @@
+---
+title: Страница предмета
+description: межмузейный проект ДВАЖДЫ СПАСЕННЫЕ
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "24-eng" %}
+{% set id = "24" %}
+{% extends "../templates/layouts/_layout.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--vertical">
+
+  <div class="before-after" style="max-width: 517px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[23].id }}/{{ tests.list[23].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[23].id }}/{{ tests.list[23].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[22].id }}.html" class="arrows__link"><img src="img/left-arrow.svg" width="50" alt=""></a>
+        <a href="{{ tests.list[24].id }}.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+      <h2>{{ tests.list[23].author }}</h2>
+      <h3>{{ tests.list[23].title }}</h3>
+
+      <ul>
+        <li>{{ tests.list[23].place }}</li>
+        <li>Инв. {{ tests.list[23].inv }}</li>
+        <li>{{ tests.list[23].material }}</li>
+        <li>{{ tests.list[23].size }} см.</li>
+        <li>{{ tests.list[23].masters }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>Бронзовый бюст, изображающий Франческо дель Неро (1487-1563), представителя видного флорентийского семейства и
+      казначея римского папы Климента VII, был приобретен музеями Берлина во Флоренции в 1895 году в Палаццо Торриджани
+      (Дель Неро) при посредничестве крупнейшего флорентийского антиквара Стефано Бардини. Бюст близко повторяет
+      мраморное изображение на надгробии Франческо дель Неро в Риме в церкви Санта Мария Минерва, выполненное
+      скульптором Джулио Маццони, учеником Даниэле да Вольтерра. Согласно точке зрения немецких исследователей начала XX
+      в., бронзовый вариант был прототипом, ранней работой Маццони, а мраморный был скопирован с него. Результаты
+      проведенных сравнений обоих вариантов вместе с тщательным анализом документов, относящихся к этому произведению, а
+      также обнаружение еще одного повторения конца XIX в., выполненного в бронзе (частное собрание), противоречат этой
+      гипотезе.
+    </p>
+    <p><i>Реставрация</i></p>
+    <p>Определен состав металла. Проведена очистка и укрепление поверхности. Частично восполнены утраты поверхности.
+      Бюст смонтирован на опорном каркасе на мраморном постаменте.
+    </p>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+---
+title: Страница предмета
+description: межмузейный проект ДВАЖДЫ СПАСЕННЫЕ
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "21-eng" %}
+{% extends "../templates/layouts/_layout.html" %}
+
+{% block content %}
+
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--horizontal">
+
+  <div class="before-after">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[20].id }}/{{ tests.list[20].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[20].id }}/{{ tests.list[20].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[19].id }}.html" class="arrows__link"><img src="img/left-arrow.svg" width="50" alt=""></a>
+        <a href="{{ tests.list[21].id }}.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+      <h2>{{ tests.list[20].author }}</h2>
+      <h3>{{ tests.list[20].title }}</h3>
+
+      <ul>
+        <li>{{ tests.list[20].place }}</li>
+        <li>Инв. {{ tests.list[20].inv }}</li>
+        <li>{{ tests.list[20].material }}</li>
+        <li>{{ tests.list[20].size }} см.</li>
+        <li>{{ tests.list[20].masters }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>Оригинальная чернильница, изображающая мальчика, состязающегося с огромной (в натуральную величину) саранчой,
+      притаившейся в ветвях дерева, поступила в дар Берлинским музеям в 1901 году из Мюнхена. Произведение отличают
+      нетипичная композиция и полное отсутствие аналогов в музейных и частных собраниях. Атрибуция мастерской Андреа
+      Риччо – падуанскому скульптору малых форм, изображавшего животных и насекомых в натуральную величину и
+      пользовавшегося слепками с натуры, была предложена Вильгельмом фон Боде и поддержана венским искусствоведом Лео
+      Планишигом. В настоящее время атрибуция представляется несколько условной, что нисколько не умаляет художественных
+      достоинств этого необычного произведения.
+    </p>
+    <p><i>Реставрация</i></p>
+    <p>Определен состав металла. Проведена очистка и укрепление поверхности.</p>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,59 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "04" %}
+{% set id = "04" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--vertical">
+
+  <div class="before-after-eng" style="max-width: 517px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[3].id }}/{{ tests.list[3].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[3].id }}/{{ tests.list[3].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[2].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[4].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+
+      <h2>{{ tests.list[3].author_eng }}</h2>
+      <h3>{{ tests.list[3].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[3].place_eng }}</li>
+        <li>Inv. {{ tests.list[3].inv_eng }}</li>
+        <li>{{ tests.list[3].material_eng }}</li>
+        <li>H. {{ tests.list[3].size }} cm.</li>
+        <li>{{ tests.list[3].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>The oinochoe pitchers with a triple petal rim are one of the most characteristic forms of Greek painted ceramics.
+      They were used not only in everyday life, but also for exaltation rites, including burial rites. </p>
+    <p>The Cyprus oinochoes of the archaic period are often spherical, decorated with various arrangements of concentric
+      circles as if moving in their orbits. They convey to us the ancient ideas about the animation of the cosmos and
+      its divine laws - not only the laws of the human world, but the entire vast universe, with the Moon and Sun,
+      planets and countless star worlds.</p>
+    <p><i>Conservation</i></p>
+    <p>The oinochoe is assembled together from over 125 fragments. Approximately one fifth of the surface of the
+      oinochoe was heavily burnt, and one seventh was lost. During the restoration, the fragments were cleaned of soot
+      and glued together, the losses were filled.
+    </p>
+  </div>
+</section>
+
+{% endblock %}

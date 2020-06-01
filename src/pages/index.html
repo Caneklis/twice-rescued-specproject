@@ -1,0 +1,32 @@
+---
+title: Главная страница
+description: межмузейный проект ДВАЖДЫ СПАСЕННЫЕ
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "index-eng" %}
+{% extends "../templates/layouts/_layout.html" %}
+
+{% block content %}
+<!-- Slider main container -->
+<div class="promo swiper-container">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+
+    {% import "../templates/data/data.html" as tests %}
+
+    {% for test in tests.list %}
+    <div class="swiper-slide promo__slider-item">
+      <div class="promo__slider-picture">
+        <a class="inline-popup1" href="{{test.id}}.html">
+          <img src="img/state/after/{{test.id}}-after.jpg" alt="{{test.title}}">
+        </a>
+      </div>
+      <h2 class="promo__slider-composition">{{test.title}}</h2>
+      <h3 class="promo__slider-author">{{test.author}}</h3>
+    </div>
+    {% endfor %}
+
+  </div>
+</div>
+
+{% endblock %}

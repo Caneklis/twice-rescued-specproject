@@ -1,0 +1,59 @@
+---
+title: Страница предмета
+description: межмузейный проект ДВАЖДЫ СПАСЕННЫЕ
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "22-eng" %}
+{% set id = "22" %}
+{% extends "../templates/layouts/_layout.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--vertical">
+
+  <div class="before-after" style="max-width: 517px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[21].id }}/{{ tests.list[21].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[21].id }}/{{ tests.list[21].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[20].id }}.html" class="arrows__link"><img src="img/left-arrow.svg" width="50" alt=""></a>
+        <a href="{{ tests.list[22].id }}.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+      <h2>{{ tests.list[21].author }}</h2>
+      <h3>{{ tests.list[21].title }}</h3>
+
+      <ul>
+        <li>{{ tests.list[21].place }}</li>
+        <li>Инв. {{ tests.list[21].inv }}</li>
+        <li>{{ tests.list[21].material }}</li>
+        <li>{{ tests.list[21].size }} см.</li>
+        <li>{{ tests.list[21].masters }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>Статуэтка «Святой Иероним» была приобретена музеями Берлина в 1895 году вместе с собранием итальянских бронз,
+      принадлежавшим английскому коллекционеру немецкого происхождения Генри Пфунгсту. Коллекция была собрана и
+      каталогизирована при непосредственном участии Вильгельма фон Боде, опубликовавшего произведение и приписавшего
+      авторство произведения флорентийскому скульптору Бертольдо ди Джованни (1420-1491). Бертольдо, учившийся у
+      Донателло и бывший, в свою очередь, учителем Микеланджело, занимал немаловажное промежуточное место в истории
+      итальянской скульптуры, а кроме того, состоял хранителем собрания античных скульптур при дворе Лоренцо
+      Великолепного. Вильгельм фон Боде посвятил творчеству Бертольдо отдельную монографию, вышедшую в 1925 году.
+      Атрибуция статуэтки Бертольдо общепринята, с ней соглашался, в том числе, Джон Поуп-Хеннеси. В новейшее время
+      Джеймс Дрейпер выразил некоторые сомнения, с осторожностью предлагая считать статуэтку работой флорентийского
+      скульптора ок. 1500 г.
+    </p>
+    <p><i>Реставрация</i></p>
+    <p>Определен состав металла. Проведена очистка и укрепление поверхности.</p>
+  </div>
+</section>
+
+{% endblock %}

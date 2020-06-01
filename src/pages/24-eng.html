@@ -1,0 +1,58 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "24" %}
+{% set id = "24" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--vertical">
+
+  <div class="before-after-eng" style="max-width: 517px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[23].id }}/{{ tests.list[23].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[23].id }}/{{ tests.list[23].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[22].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[24].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+      <h2>{{ tests.list[23].author_eng }}</h2>
+      <h3>{{ tests.list[23].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[23].place_eng }}</li>
+        <li>Inv. {{ tests.list[23].inv_eng }}</li>
+        <li>{{ tests.list[23].material_eng }}</li>
+        <li>{{ tests.list[23].size }} cm.</li>
+        <li>{{ tests.list[23].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>The bronze portrait of Francesco del Nero (1487-1563), a member of a rich Florentine family and a treasurer of
+      pope Clement VII, was acquired by the museums of Berlin in Florence in 1895 in Palazzo Torrigiani (formerly
+      Palazzo del Nero) with the help of the Florentine antiquarian Stefano Bardini. The bust closely repeats a marble
+      portrait from Francesco del Nero’s tomb in a Roman church of Santa Maria sopra Minerva made by Giulio Mazzoni, a
+      pupil of the more famous Daniele da Volterra. According to Wilhelm von Bode (1896), the bronze version was a
+      prototype by Mazzoni, and the marble one was merely a copy after it. This conclusion was challenged by Vasily
+      Rastorguev (2018), who proposed that the present work to be a late-19th century copy after the Roman bust.
+    </p>
+    <p><i>Conservation</i></p>
+    <p>The metal composition was determined. The surface was cleaned and consolidated. Surface losses were partially
+      filled. The bust was mounted onto a support frame on a marble pedestal. </p>
+  </div>
+</section>
+
+{% endblock %}

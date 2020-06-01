@@ -1,0 +1,58 @@
+---
+title: Страница предмета
+description: межмузейный проект ДВАЖДЫ СПАСЕННЫЕ
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "19-eng" %}
+{% extends "../templates/layouts/_layout.html" %}
+
+{% block content %}
+
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card">
+
+  <div class="before-after">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[18].id }}/{{ tests.list[18].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[18].id }}/{{ tests.list[18].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[17].id }}.html" class="arrows__link"><img src="img/left-arrow.svg" width="50" alt=""></a>
+        <a href="{{ tests.list[19].id }}.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+      <h2>{{ tests.list[18].author }}</h2>
+      <h3>{{ tests.list[18].title }}</h3>
+
+      <ul>
+        <li>{{ tests.list[18].place }}</li>
+        <li>Инв. {{ tests.list[18].inv }}</li>
+        <li>{{ tests.list[18].material }}</li>
+        <li>{{ tests.list[18].size }} см.</li>
+        <li>{{ tests.list[18].fact }}</li>
+        <li>{{ tests.list[18].masters }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>Этот поврежденный женский профиль – все, что осталось от пары небольших рельефов, изображавших короля Венгрии
+      Матвея Корвина и его супругу, купленных в музеи Берлина в 1842 году у маркиза Орландини во Флоренции. Если
+      относительно идентификации мужской фигуры вопросов не возникало, то женскую ассоциировали как с первой женой
+      короля, Кунигундой, так и со второй – Беатриче Арагонской. Профиль женщины с характерной прической действительно
+      несколько напоминает портретное изображение Беатриче, выполненной скульптором Франческо Лаурана (Коллекция Фрик,
+      США). Принадлежность рельефа к школе Верроккьо в настоящее время оспаривается, существует гипотеза, приближающая
+      их к кругу Бенедетто да Майано вслед за схожими парными изображениями Матвея Корвина и его жены, хранящихся в
+      Музее изобразительных искусств в Будапеште.
+    </p>
+    <p><i>Реставрация</i></p>
+    <p>Проведены исследования. Реставрационные работы планируется провести в 2021 г.</p>
+  </div>
+</section>
+
+{% endblock %}

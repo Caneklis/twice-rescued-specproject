@@ -1,0 +1,58 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "27" %}
+{% set id = "27" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--horizontal">
+
+  <div class="before-after-eng">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[26].id }}/{{ tests.list[26].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[26].id }}/{{ tests.list[26].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[25].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[27].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+      <h2>{{ tests.list[26].author_eng }}</h2>
+      <h3>{{ tests.list[26].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[26].place_eng }}</li>
+        <li>Inv. {{ tests.list[26].inv_eng }}</li>
+        <li>{{ tests.list[26].material_eng }}</li>
+        <li>{{ tests.list[26].size }} cm.</li>
+        <li>{{ tests.list[26].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>This small bronze bust of a child, typologically close to a number of popular in the 15th century marble images
+      of the Infant Christ and St. John the Baptist, entered the museums of Berlin in 1903, from the collection of
+      Princess Victoria, the widow of Kaiser Frederick III. Having published it shortly before the acquisition, Wilhelm
+      von Bode was convinced that the author of the sculpture was the famous Florentine sculptor Antonio Rossellino
+      (circa 1427-1478), and believed, therefore, that the bust was his only remaining work in bronze. However, the
+      technical features of the casting do not allow the work to be attributed to the Renaissance. Unfortunately, as the
+      Italian scholar Francesco Negri Arnoldi discovered in 1967, the bronze version is just a careless copy from the
+      marble original, which is attributed to Desiderio da Settignano (ca. 1428-1464), now in the Getty Museum, USA.
+    </p>
+    <p><i>Conservation</i></p>
+    <p>The metal composition was determined. The surface was cleaned and consolidated. </p>
+  </div>
+</section>
+
+{% endblock %}

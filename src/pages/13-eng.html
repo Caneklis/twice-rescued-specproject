@@ -1,0 +1,71 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+width: 517
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "13" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card">
+
+  <div class="before-after-eng" style="max-width: 517px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[12].id }}/{{ tests.list[12].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[12].id }}/{{ tests.list[12].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[11].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[13].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+
+        <a class="popup-youtube" href="https://www.youtube.com/watch?v=xi-r8_aLXGY"><img src="img/video_play_lines.svg"
+            width="50"></a>
+      </div>
+
+      <h2>{{ tests.list[12].author_eng }}</h2>
+      <h3>{{ tests.list[12].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[12].place_eng }}</li>
+        <li>Inv. {{ tests.list[12].inv_eng }}</li>
+        <li>{{ tests.list[12].material_eng }}</li>
+        <li>H. {{ tests.list[12].size }} cm.</li>
+        <li>{{ tests.list[12].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article  card__article--with-video">
+    <p>The sculpture was acquired by one of the most prominent figures in the Berlin Museums, the art historian Wilhelm
+      von Bode (1845-1929), in Florence in 1878 from the heirs of the old Florentine Strozzi family, along with several
+      outstanding works of painting and sculpture. The role of an intermediary in this historic-scale transaction was
+      carried out by Stefano Bardini (1836-1922), the most significant Italian antiquary of his time. Attributed and
+      published by Bode as Donatello's own handwork, the statue became the pride of the collection and was repeatedly
+      featured in pre-war literature. Bode assumed that it had been commissioned for the baptistery font in the Orvieto
+      Cathedral, asked to Donatello in 1424 but never installed in its supposed place. After the object’s disappearance
+      in the post-war period, the St. John was removed from the list of works attributed to the sculptor. The discovery
+      of archive documents mentioning the statue of St. John with the attribution to Donatello (in the inventory of the
+      Palazzo Martelli, 1493), and a number of stylistic comparisons with the accepted works of the master (the Virtues
+      from the Baptistery in Siena, the Prophets from the Florentine Campanile or the wooden statue of Maria Magdalena
+      now in the Museo dell’Opera del Duomo, Florence), allow us to return to the original attribution of the sculpture
+      to Donatello. This attribution is enforced by the materials of technical and technological research.
+    </p>
+    <p><i>Conservation</i></p>
+    <p>The surface was cleaned, and the oxide layer was consolidated. The metal composition was determined. The
+      fragments (both feet and the right hand) which had been considered lost, were found and attached to the sculpture.
+      The left hand was cast from epoxy composition based on the plaster copy. The special wire frame and pedestal were
+      made.</p>
+
+  </div>
+</section>
+
+{% endblock %}

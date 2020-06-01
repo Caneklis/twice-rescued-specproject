@@ -1,0 +1,59 @@
+---
+title: Страница предмета
+description: межмузейный проект ДВАЖДЫ СПАСЕННЫЕ
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "08-eng" %}
+{% set id = "08" %}
+{% extends "../templates/layouts/_layout.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--vertical">
+
+  <div class="before-after" style="max-width: 517px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[7].id }}/{{ tests.list[7].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[7].id }}/{{ tests.list[7].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[6].id }}.html" class="arrows__link"><img src="img/left-arrow.svg" width="50" alt=""></a>
+        <a href="{{ tests.list[8].id }}.html" class="arrows__link"><img src="img/right-arrow.svg" width="50" alt=""></a>
+      </div>
+      <h2>{{ tests.list[7].author }}</h2>
+      <h3>{{ tests.list[7].title }}</h3>
+
+      <ul>
+        <li>{{ tests.list[7].place }}</li>
+        <li>Инв. {{ tests.list[7].inv }}</li>
+        <li>{{ tests.list[7].material }}</li>
+        <li>В. {{ tests.list[7].size }} см.</li>
+        <li>{{ tests.list[7].masters }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>Терракоты — статуэтки из обожженной глины — составляют значительный раздел греческого искусства. Их дарили богам
+      и героям на ритуальных праздниках, подносили в святилища, ими снабжали умерших.
+    </p>
+    <p>Статуэтка юноши была создана в земледельческой области Беотия во второй половине V века до н. э., когда греческое
+      искусство находилось под влиянием творчества великих ваятелей Фидия, Мирона и Поликлета. Отзвуки большого
+      искусства ощутимы в малом жанре глиняных фигурок. Юноша, приносящий в дар божеству петуха, стоит, опираясь на
+      правую ногу, его обнаженное атлетическое тело исполнено силы и достоинства. Наброшенный на спину и закрывающий
+      руки плащ сглаживает выступающие формы. Пышные волосы увенчаны праздничной повязкой. Маленький петушок мог быть
+      даром как подземным богам Аиду и Персефоне, так и богине земли Деметре и богу солнца Гелиосу. Терракота была
+      покрыта белой обмазкой и ярко раскрашена: тело юноши — красной краской, плащ — синей (потерта).
+    </p>
+    <p><i>Реставрация</i></p>
+    <p>До реставрации терракота находилась под толстым слоем серой коры. Наросты снимали в течение нескольких месяцев, и
+      тогда проявилась первичная поверхность и раскраска. Была произведена склейка фигуры с постаментом. </p>
+  </div>
+</section>
+
+{% endblock %}

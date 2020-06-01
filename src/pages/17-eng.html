@@ -1,0 +1,61 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "17" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card">
+
+  <div class="before-after-eng">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[16].id }}/{{ tests.list[16].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[16].id }}/{{ tests.list[16].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[15].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[17].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+      <h2>{{ tests.list[16].author_eng }}</h2>
+      <h3>{{ tests.list[16].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[16].place_eng }}</li>
+        <li>Inv. {{ tests.list[16].inv_eng }}</li>
+        <li>{{ tests.list[16].material_eng }}</li>
+        <li>{{ tests.list[16].size }} cm.</li>
+        <li>{{ tests.list[16].fact_eng }}</li>
+        <li>{{ tests.list[16].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>This touching glazed terracotta of Madonna and Child was presented as a gift to the Berlin museums in 1888 by
+      count August Dönhoff-Friedrichstein, who purchased it in Florence from the famous antique dealer Stefano Bardini.
+      Half-figures of Mary with Child were typical for the workshop of Della Robbia, and can be brought into line with
+      works from the Metropolitan Museum ("The Bliss Madonna ") and the Museum of Fine Arts in Boston (Shaw collection),
+      similar in size and close in iconography, as well as with the reliefs in the chapels of Collegiata at Impruneta
+      near Florence. The type of "Friedrichstein Madonna", along with the characteristic pattern of the frame, imitating
+      a stone mosaic, is most accurately reproduced in the version of the Albright-Knox Art Museum, Buffalo, USA
+      (previously in the Capuchin church in Santa Fiora near Siena). The assumption of some researchers that the
+      versions from Buffalo and Berlin were made with the same mould seems to be groundless since the differences in
+      small details are quite large. John Pope-Hennessy dated them to 1435-1440, and Giancarlo Gentilini – to 1445-1450.
+    </p>
+    <p><i>Conservation</i></p>
+    <p>The object has been studied. Conservation is planned for 2021. </p>
+  </div>
+</section>
+
+{% endblock %}

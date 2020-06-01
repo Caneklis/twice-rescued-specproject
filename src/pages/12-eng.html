@@ -1,0 +1,66 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "12" %}
+{% set id = "12" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--vertical">
+
+  <div class="before-after-eng" style="max-width: 517px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[11].id }}/{{ tests.list[11].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[11].id }}/{{ tests.list[11].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[10].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[12].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+
+      <h2>{{ tests.list[11].author_eng }}</h2>
+      <h3>{{ tests.list[11].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[11].place_eng }}</li>
+        <li>Inv. {{ tests.list[11].inv_eng }}</li>
+        <li>{{ tests.list[11].material_eng }}</li>
+        <li>H. {{ tests.list[11].size }} cm.</li>
+        <li>{{ tests.list[11].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>On the island of Cyprus, which was at the crossroads between the ancient East and the ancient West, the last and
+      most significant period of artistic prosperity was the Archaic (mid 8th- early 5th century BC). There, much
+      earlier than in Greece, appeared monumental sculptures of clay and limestone (in Greece, mainly marble), they
+      filled temenoses - open-air shrines of gods. This is evidenced by the shrine in Aya Irini in north-west Cyprus,
+      where a Swedish expedition in the late 1920s - early 1930s found more than two thousand figures.
+    </p>
+    <p>Nude statues of men were not common in Cyprus. They were depicted in tight robes, standing upright, flat in
+      profile, looking directly at the viewer, with some attributes in their hands - a palm branch, a sacrificial
+      animal, a vessel. These statues are called "adorants" - admirers of god, bringing him gifts. They are almost
+      indistinguishable from the statues of gods, to one of which this head may have belonged. It has a generalized
+      shape, an archaic graceful hairstyle and a beard. But at the same time, the statue possesses integrity,
+      spirituality and special energy, which are related to the Greek statues of heroes and gods of the early 5th
+      century BC. This is probably one of the last high achievements of the Cyprus sculptors, who at that time had
+      already lost their independence and were increasingly imitating Hellenic models.
+    </p>
+    <p><i>Conservation</i></p>
+    <p>The head came almost in one piece, only the lower part of the beard was lost. The big problem was cleaning the
+      monument off the dense crust and soil deposits. </p>
+  </div>
+</section>
+
+{% endblock %}

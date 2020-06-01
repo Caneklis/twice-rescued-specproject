@@ -1,0 +1,70 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "30" %}
+{% set id = "30" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--vertical">
+
+  <div class="before-after-eng" style="max-width: 517px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[29].id }}/{{ tests.list[29].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[29].id }}/{{ tests.list[29].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[28].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[0].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+      <h2>{{ tests.list[29].author_eng }}</h2>
+      <h3>{{ tests.list[29].title }}</h3>
+
+      <ul>
+        <li>{{ tests.list[29].place }}</li>
+        <li>Inv. {{ tests.list[29].inv }}</li>
+        <li>{{ tests.list[29].material }}</li>
+        <li>В. {{ tests.list[29].size }} см.</li>
+        <li>{{ tests.list[29].masters }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>Among the most famous works of the French sculptor Jean-Antoine Houdon (1741-1828), who was famous as one of the
+      most talented portrait makers of his time, there are the portraits of Voltaire, made from different materials and
+      divided into several types. All of them have gained immense popularity and were repeatedly replicated by foundry
+      workers and later copyists of the 19-20th centuries. Considering that, the fact that the bronze bust of Voltaire
+      from the former collection of the Kaiser Friedrich Museum (donated by Justice Adviser Karl Lessing upon the
+      opening of the museum in 1905) was created in the lifetime and with the direct participation of the master is even
+      more remarkable.</p>
+    <p>Houdon, who first portrayed 84-year-old Voltaire in Paris a few weeks before his death in 1778, first only made
+      the head in marble (Angers, the Museum of Fine Arts), and then reworked the portrait, adding a wig and costume in
+      current French fashion. Catherine the Great, who was in correspondence with Voltaire and saddened by the news of
+      his death, in the same year acquired both versions: with an uncovered head (in bronze, now in the collection of
+      the Pushkin State Museum of Fine Arts), and the version in the suit "a la française" (gypsum, location unknown).
+      Of these two, she strongly preferred the first one. According to the wishes of the empress, Houdon also created
+      the third version of the bust, adding a Roman toga with a rim decorated with laurel leaves (marble, the State
+      Hermitage, St. Petersburg). All versions of the bust have the same signature and date - 1778. According to
+      Guillaume Scherf, the curator of the Louvre sculptures, this bronze bust "in an antique style", copying the marble
+      original from St. Petersburg, was the one exhibited at the Salon of Paris in 1791, and a plaster prototype for
+      both versions is currently in the collection of the Ducal Museum in Gotha, Germany.
+    </p>
+    <p><i>Conservation</i></p>
+    <p>The metal composition was determined. The surface was cleaned and consolidated. Stains of active corrosion on the
+      inner surface of the sculpture were removed. During disassembly, a Danish daler was found inside, it was used as a
+      fastening element.</p>
+  </div>
+</section>
+
+{% endblock %}

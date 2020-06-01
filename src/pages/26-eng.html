@@ -1,0 +1,61 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "26" %}
+{% set id = "26" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--vertical">
+
+  <div class="before-after-eng" style="max-width: 517px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[25].id }}/{{ tests.list[25].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[25].id }}/{{ tests.list[25].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[24].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[26].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+      <h2>{{ tests.list[25].author_eng }}</h2>
+      <h3>{{ tests.list[25].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[25].place_eng }}</li>
+        <li>Inv. {{ tests.list[25].inv_eng }}</li>
+        <li>{{ tests.list[25].material_eng }}</li>
+        <li>В. {{ tests.list[25].size }} cm.</li>
+        <li>{{ tests.list[25].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>This unusual bronze bust was purchased by the Berlin museums in 1888 from an antiquarian and collector Charles
+      Sedelmeyer(1837-1925) in Paris. This object has a remarkable history. It remained in France from the beginning of
+      the XIX century: after being moved from Italy during the Napoleonic campaigns, the bust ended up in the collection
+      of Baron Dominique-Vivant Denon (1747-1825), the first director of the Louvre, where it was mistakenly considered
+      a portrait of Petrarch. In reality, the portrait depicts Giovanni Battista Spagnoli (1448-1516), the general of
+      the Carmelite order and popular court poet of the Mantuan dukes. Similarly to the bronze bust of the city's chief
+      painter, Andrea Mantegna, which still adorns the chapel in the basilica of Sant'Andrea in Mantua, the portrait of
+      Cavalli was equipped with a massive decorative frame consisting of a porphyry disk and a relief frieze. Both
+      busts, with some conventionality, are considered works of the Mantuan sculptor Gian Marco Cavalli, and can be
+      traced back to the designs of Mantegna himself. The work is distinguished by a fine detailing of the facial
+      features and its high quality.
+    </p>
+    <p><i>Conservation</i></p>
+    <p>The metal composition was determined. The surface was cleaned and consolidated. </p>
+  </div>
+</section>
+
+{% endblock %}

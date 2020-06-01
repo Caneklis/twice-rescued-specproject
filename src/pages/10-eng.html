@@ -1,0 +1,62 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "10" %}
+{% set id = "10" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--horizontal">
+
+  <div class="before-after-eng">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[9].id }}/{{ tests.list[9].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[9].id }}/{{ tests.list[9].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[8].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[10].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+
+      <h2>{{ tests.list[9].author_eng }}</h2>
+      <h3>{{ tests.list[9].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[9].place_eng }}</li>
+        <li>Inv. {{ tests.list[9].inv_eng }}</li>
+        <li>{{ tests.list[9].material_eng }}</li>
+        <li>H. {{ tests.list[9].size }} cm.</li>
+        <li>{{ tests.list[9].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>In ancient Italy and Rome from the 2nd century BC to the 2nd century A.D. it was customary to decorate buildings
+      with terracotta reliefs with different scenes - first only on the outside and later indoors. They were named after
+      their first collector and researcher, the Marquis Giampietro Campana. Mythological, symbolic and genre scenes were
+      assembled in shared belts. This relief with a rare and remarkable scene depicts a Greek palaesta (athletic
+      training ground), enclosed by temples and set with monuments of victorious athletes. In the center is a statue of
+      Hercules wearing a lion's skin and holding a club. On the sides: on the left - the figures of the fist fighters;
+      on the right - the winners in competitions, in them we can recognize masterpieces of Greek sculptors - Apoxyomenos
+      by Lysippus (the athlete scraping the sand off the body) and Diadumenos by Polykleitos (the athlete crowning
+      himself with a victory ribbon). The relief was subtly coloured with red and yellow paints.
+    </p>
+    <p><i>Conservation</i></p>
+    <p>The relief is glued together from four large pieces with chipped edges and damages. The painting was concealed
+      under a layer of dirt. The fronton and shapes along the top edge were lost.
+    </p>
+  </div>
+</section>
+
+{% endblock %}

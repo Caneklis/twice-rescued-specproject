@@ -1,0 +1,62 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "08" %}
+{% set id = "08" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--vertical">
+
+  <div class="before-after-eng" style="max-width: 517px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[7].id }}/{{ tests.list[7].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[7].id }}/{{ tests.list[7].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[6].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[8].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+
+      <h2>{{ tests.list[7].author_eng }}</h2>
+      <h3>{{ tests.list[7].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[7].place_eng }}</li>
+        <li>Inv. {{ tests.list[7].inv_eng }}</li>
+        <li>{{ tests.list[7].material_eng }}</li>
+        <li>H. {{ tests.list[7].size }} cm.</li>
+        <li>{{ tests.list[7].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>Terracotta statues made of burnt clay are a significant part of Greek art. They were gifted to gods and heroes at
+      ritual feasts, brought to shrines, and given to the dead.
+    </p>
+    <p>Boeotia in the second half of the 5th century BC, when Greek art was influenced by the great sculptors Phidias,
+      Myron and Polykleitos. The echo of great art is reflected in the smaller genre of clay figurines. A young man who
+      brings a rooster as a gift to a deity stands on his right leg, his naked athletic body is full of strength and
+      dignity. The cloak on his back, which covers his hands, smoothes out the protruding shapes. His lush hair is
+      topped with a festive headband. The little rooster could be a gift to the underground gods Hades and Persephone,
+      as well as to Demeter, the earth goddess and Helios, the sun god. The terracotta was covered with white slip and
+      brightly painted: the body of the young man is red, the cloak is blue (scuffed).
+    </p>
+    <p><i>Conservation</i></p>
+    <p>Before conservation, the terracotta was covered with a thick layer of grey crust. It took a few months to remove
+      it, and then the original surface and colours appeared. The figure was reattached to the pedestal. </p>
+  </div>
+</section>
+
+{% endblock %}

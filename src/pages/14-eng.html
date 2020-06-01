@@ -1,0 +1,62 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "14" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card">
+  <div class="before-after-eng" style="max-width: {{ tests.list[13].width }}px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[13].id }}/{{ tests.list[13].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[13].id }}/{{ tests.list[13].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[12].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[14].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+      <h2>{{ tests.list[13].author_eng }}</h2>
+      <h3>{{ tests.list[13].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[13].place_eng }}</li>
+        <li>Inv. {{ tests.list[13].inv_eng }}</li>
+        <li>{{ tests.list[13].material_eng }}</li>
+        <li>H. {{ tests.list[13].size }} cm.</li>
+        <li>{{ tests.list[13].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>This Spiritello in its present condition is a tragic remembrance of the war. It has a long history: in the 17th
+      century it belonged to Giovanni Pietro Bellori (1613-1696), an Italian painter and antiquary, an expert and art
+      historian. It was considered a work of antiquity and entered the assembly of the Brandenburg Electors in 1698 as
+      such. At the very beginning of the 19th century, this statuette, together with a number of other valuable
+      artworks, was captured by the Napoleonic troops and sent to Paris, where it became a part of the Napoleon Museum,
+      located in the Louvre. Later it was returned back to Berlin. Only in 1892, Wilhelm von Bode recognized a sculpture
+      of the Italian Renaissance in it, and suggested that the statuette should be considered the work of Donatello,
+      close in time to the figures of dancing putti of the Siena Baptistry; this point of view, however, did not find
+      enough support. In the postwar period, any mentions of this figurine almost completely disappeared from academic
+      literature. According to some contemporary researchers, it can be a work of a Roman sculptor of the first quarter
+      of the 16th century. A number of correlations can also be found in the numerous figures of putti executed in the
+      workshop of the Venetian sculptor Niccolò Roccatagliata (ca. 1560-1636).
+    </p>
+    <p><i>Conservation</i></p>
+    <p>The surface was cleaned, and the oxide layer was consolidated. The metal composition was determined, and
+      potential fracture zones were identified by neutron tomography, which was taken into account when designing the
+      support frame.</p>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,59 @@
+---
+title: Страница предмета
+description: межмузейный проект ДВАЖДЫ СПАСЕННЫЕ
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "15-eng" %}
+{% extends "../templates/layouts/_layout.html" %}
+
+{% block content %}
+
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--horizontal">
+
+  <div class="before-after" style="max-width: 800px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[14].id }}/{{ tests.list[14].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[14].id }}/{{ tests.list[14].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[13].id }}.html" class="arrows__link"><img src="img/left-arrow.svg" width="50" alt=""></a>
+        <a href="{{ tests.list[15].id }}.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+      <h2>{{ tests.list[14].author }}</h2>
+      <h3>{{ tests.list[14].title }}</h3>
+
+      <ul>
+        <li>{{ tests.list[14].place }}</li>
+        <li>Инв. {{ tests.list[14].inv }}</li>
+        <li>{{ tests.list[14].material }}</li>
+        <li>{{ tests.list[14].size }} см.</li>
+        <li>{{ tests.list[14].fact }}</li>
+        <li>{{ tests.list[14].masters }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>Прямоугольная плакетка, изображающая сцену бичевания Христа, происходила из старого собрания Бранденбургских
+      курфюрстов, так называемой «Кунсткамеры», откуда перешла в музеи Берлина в XIX веке. Опубликованная неоднократно
+      как работа Донателло в довоенной литературе, плакетка иконографически связана с двумя произведениями
+      донателлианского круга – терракотовым рельефом из музея Виктории и Альберта («Алтарь Форцори») и рисунком из
+      собрания Уффицци. Хорст Янсон, на основе анализа произведения отвергающий возможность авторства Донателло, все же
+      видит в ней глубокое влияние поздней стилистики Донателло падуанского периода, датируя тем самым временем после
+      1460-х годов. Две других версии плакетки, в парижском Лувре и в музее Страсбурга (последняя поступила туда при
+      участии Вильгельма фон Боде после Франко-Прусской войны), имеют некоторые отличия в исполнении и поднимают вопрос
+      о сравнительной датировке этих произведений.</p>
+    <p><i>Реставрация</i></p>
+    <p>В середине 1950-х годов была проведена очистка плакетки. В 2019 г. выполнена подклейка утраченного фрагмента,
+      патинирование и консервация поверхности.</p>
+  </div>
+</section>
+
+{% endblock %}

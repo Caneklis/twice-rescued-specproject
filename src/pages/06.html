@@ -1,0 +1,58 @@
+---
+title: Страница предмета
+description: межмузейный проект ДВАЖДЫ СПАСЕННЫЕ
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "06-eng" %}
+{% set id = "06" %}
+{% extends "../templates/layouts/_layout.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--vertical">
+
+  <div class="before-after" style="max-width: 517px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[5].id }}/{{ tests.list[5].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[5].id }}/{{ tests.list[5].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[4].id }}.html" class="arrows__link"><img src="img/left-arrow.svg" width="50" alt=""></a>
+        <a href="{{ tests.list[6].id }}.html" class="arrows__link"><img src="img/right-arrow.svg" width="50" alt=""></a>
+      </div>
+      <h2>{{ tests.list[5].author }}</h2>
+      <h3>{{ tests.list[5].title }}</h3>
+
+      <ul>
+        <li>{{ tests.list[5].place }}</li>
+        <li>Инв. {{ tests.list[5].inv }}</li>
+        <li>{{ tests.list[5].material }}</li>
+        <li>В. {{ tests.list[5].size }} см.</li>
+        <li>{{ tests.list[5].masters }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>Вазы буккеро (из глины, приобретавшей после обжига специфический темный цвет, что делало сосуды похожими на
+      бронзовые) создавались в период расцвета Этрурии (VII–VI века до н. э.) для погребальных целей. Они отличались
+      крупным размером, выразительным силуэтом и богатым декором. Данная амфора имеет два рельефных пояса на тулове,
+      которые разделяют фигурные сцены. В нижней части показана процессия всадников — элитной части общества, к которой
+      мог принадлежать умерший. Верхняя часть декорирована выпуклыми элементами. На шейке с двух сторон представлены
+      рельефные головки богини с волосами до плеч, на венчике — четыре такие же головки, но меньшего размера. Богиня
+      явно имеет отношение к ритуалу смерти-возрождения, она патронирует жизнь космоса. Утраченная ныне крышка сосуда,
+      вероятно, была украшена фигуркой петуха — птицы солнца, вестника рассвета, как символа новой жизни.
+    </p>
+    <p><i>Реставрация</i></p>
+    <p>Амфора склеена из крупных фрагментов с тонированными дополнениями. До реставрации глина была отсыревшей, грязной,
+      атташи с головками отклеивались.
+    </p>
+  </div>
+</section>
+
+{% endblock %}

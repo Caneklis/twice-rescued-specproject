@@ -1,0 +1,23 @@
+{% import "../data/menu.html" as items %}
+
+<nav class="main-nav">
+  <!-- <a href="{{page_lang_link}}.html" class="lang">English</a> -->
+  <ul class="main-nav__list">
+    {% for item in items.menu %}
+    <li class="main-nav__item {% if page_title == item.menu_link %} main-nav__item--active{% endif %}"">
+        <a href=" {{item.menu_link}}.html" class="main-nav__link">{{ item.menu_item }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <ul class="social">
+    <li class="social__item"><a href="#" class="social__item-link"><img src="img/fb-icon.svg"
+          alt="Иконка страница на facebook" width="45" height="45"><span class="visually-hidden">Страница на
+          facebook</span></a></li>
+    <li class="social__item"><a href="#" class="social__item-link"><img src="img/yt-icon.svg"
+          alt="Иконка канал на youtube" width="45" height="45"><span class="visually-hidden">Канал на youtube</span></a>
+    </li>
+  </ul>
+
+  <a href="http://www.museumconservation.ru/" class="main-nav__back-link">На сайт Отдела реставрации</a>
+</nav>

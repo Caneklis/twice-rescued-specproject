@@ -1,0 +1,63 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "07" %}
+{% set id = "07" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--vertical">
+
+  <div class="before-after-eng" style="max-width: 517px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[6].id }}/{{ tests.list[6].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[6].id }}/{{ tests.list[6].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[5].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[7].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+
+      <h2>{{ tests.list[6].author_eng }}</h2>
+      <h3>{{ tests.list[6].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[6].place_eng }}</li>
+        <li>Inv. {{ tests.list[6].inv_eng }}</li>
+        <li>{{ tests.list[6].material_eng }}</li>
+        <li>H. {{ tests.list[6].size }} cm.</li>
+        <li>{{ tests.list[6].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>Stamnoses (large vessels for wine) were often used in rituals of the dying and resurrecting god Dionysus, patron
+      of wine and grapes. From the 5th century BC they were commissioned by rich Etruscans. This vessel was found in one
+      of the Etruscan tombs. The scene depicted on it is from the myth of Agamemnon, the leader of the Trojan campaign
+      of the Greeks, who was killed on his return home by his wife Clytemnestra (the sister of Helen of Troy) and her
+      lover Aegisthus. His son Orestes (kills Aegisthus sitting on the throne with his sword) and his daughter Electra
+      (runs with an axe after Orestes) take revenge for their father. The tragic theme was often performed in Greek
+      theater: Aeschylus staged the Oresteian Trilogy (458 BC) at the feast of Dionysus in Athens; later this theme was
+      paid tribute to by Sophocles and Euripides. The stamnos was painted by the Copenhagen master who skillfully
+      combined the drama of the scene with a delicate interpretation of the heroes' figures and their vestments.
+    </p>
+    <p>The vessel was used for libations: there is an opening in the bottom.
+    </p>
+    <p><i>Conservation</i></p>
+    <p>It is reassembled from fragments with numerous fillings . The back side was restored in the 19th century and
+      partially painted over.</p>
+  </div>
+</section>
+
+{% endblock %}

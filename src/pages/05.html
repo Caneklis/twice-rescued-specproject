@@ -1,0 +1,61 @@
+---
+title: Страница предмета
+description: межмузейный проект ДВАЖДЫ СПАСЕННЫЕ
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "05-eng" %}
+{% set id = "05" %}
+{% extends "../templates/layouts/_layout.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--vertical">
+
+  <div class="before-after" style="max-width: 517px;">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[4].id }}/{{ tests.list[4].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[4].id }}/{{ tests.list[4].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[3].id }}.html" class="arrows__link"><img src="img/left-arrow.svg" width="50" alt=""></a>
+        <a href="{{ tests.list[5].id }}.html" class="arrows__link"><img src="img/right-arrow.svg" width="50" alt=""></a>
+      </div>
+      <h2>{{ tests.list[4].author }}</h2>
+      <h3>{{ tests.list[4].title }}</h3>
+
+      <ul>
+        <li>{{ tests.list[4].place }}</li>
+        <li>Инв. {{ tests.list[4].inv }}</li>
+        <li>{{ tests.list[4].material }}</li>
+        <li>В. {{ tests.list[4].size }} см.</li>
+        <li>{{ tests.list[4].masters }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>Расписные вазы со сложными сюжетами исчезли к концу IV века до н. э., когда пала независимая Эллада. В
+      последующее время они еще существовали — примерно столетие, но роспись стала скромной и непритязательной. Однако в
+      отдельных образцах декор достигает совершенства и элегантности, как показывает большой чернолаковый кратер — сосуд
+      для ночных мужских пиров-симпосиев.
+    </p>
+    <p>По центру тулова картер украшен накладной ветвью плюща с резными листиками и закрученными усиками — символом
+      виноградного бога Диониса, в честь которого по всей Греции, в Малой Азии и Италии справлялись мистерии —
+      прижизненное приобщение к смерти бога с целью получения надежды на будущее возрождение. Роспись нанесена белой
+      краской и разбавленным лаком и хорошо сочетается с узким пояском ов по венчику; сочетание блестящей поверхности
+      вазы с матовой росписью создает особый эффект. Скромность и минимализм декора подчеркивает монументальный облик и
+      выразительную форму пиршественной вазы.
+    </p>
+    <p><i>Реставрация</i></p>
+    <p>Кратер склеен из многочисленных фрагментов (более 60) с тонированным восполнением утрат. Цвет частично изменен
+      под воздействием высоких температур при горении. Присутствуют сколы, повреждения поверхности.
+    </p>
+  </div>
+</section>
+
+{% endblock %}

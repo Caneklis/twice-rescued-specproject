@@ -1,0 +1,38 @@
+---
+title: Над проектом работали
+description: межмузейный проект ДВАЖДЫ СПАСЕННЫЕ
+---
+{% set page_title = "contributors" %}
+{% set page_lang_link = "contributors-eng" %}
+{% set id = "30" %}
+{% extends "../templates/layouts/_layout.html" %}
+
+{% block content %}
+{% import "../templates/data/contibutors.html" as tests %}
+
+<section class="card">
+  <div class="card__article">
+    <h2>{{ title }}</h2>
+    <ul>
+      {% for test in tests.list %}
+      <li>
+        {% if test.link == '' %} {{test.name}} {% else %} <a href="{{test.link}}" target="_blank"> {{test.name}}</a>
+        {% endif %}
+        –
+        {{test.position}}
+      </li>
+      {% endfor %}
+    </ul>
+
+    <h3>Художники-реставраторы:</h3>
+
+    <ul>
+      {% for test in tests.list2 %}
+      <li>{% if test.link == '' %} {{test.name}} {% else %} <a href="{{test.link}}" target="_blank"> {{test.name}}</a>
+        {% endif %}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% endblock %}

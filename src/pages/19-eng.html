@@ -1,0 +1,59 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "19" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card">
+
+  <div class="before-after-eng">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[18].id }}/{{ tests.list[18].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[18].id }}/{{ tests.list[18].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[17].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[19].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+      <h2>{{ tests.list[18].author_eng }}</h2>
+      <h3>{{ tests.list[18].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[18].place_eng }}</li>
+        <li>Inv. {{ tests.list[18].inv_eng }}</li>
+        <li>{{ tests.list[18].material_eng }}</li>
+        <li>{{ tests.list[18].size }} cm.</li>
+        <li>{{ tests.list[18].fact_eng }}</li>
+        <li>{{ tests.list[18].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>This damaged relief of a woman in profile is all that is left from a small pendant relief depicting King Matthias
+      Corvinus of Hungary and his wife. The original work was purchased from Marques Orlandini in Florence in 1842 for
+      the museums of Berlin. While there were no questions over the identity of the depicted man, the woman was thought
+      to be either the king's first wife, Kunigunde, or the second — Beatrice of Aragon. The profile of the woman with
+      characteristic hairstyle does resemble Beatrice as she was portrayed by Francesco Laurana (Frick Collection, US).
+      Whether the profile belongs to Verrochio's school is being disputed now. There is a speculation placing it closer
+      to Benedetto da Maiano's circle; the speculation is based on other similar pendant depictions of Matthias Corvinus
+      and his wife stored at the Museum of Fine Arts in Budapest.
+    </p>
+    <p><i>Conservation</i></p>
+    <p>The object has been studied. Conservation is planned for 2021.</p>
+  </div>
+</section>
+
+{% endblock %}

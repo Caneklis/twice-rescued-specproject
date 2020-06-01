@@ -1,0 +1,57 @@
+---
+title: Страница предмета
+description: межмузейный проект ДВАЖДЫ СПАСЕННЫЕ
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "23-eng" %}
+{% set id = "23" %}
+{% extends "../templates/layouts/_layout.html" %}
+
+{% block content %}
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--horizontal">
+
+  <div class="before-after">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[22].id }}/{{ tests.list[22].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[22].id }}/{{ tests.list[22].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[21].id }}.html" class="arrows__link"><img src="img/left-arrow.svg" width="50" alt=""></a>
+        <a href="{{ tests.list[23].id }}.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+      <h2>{{ tests.list[22].author }}</h2>
+      <h3>{{ tests.list[22].title }}</h3>
+
+      <ul>
+        <li>{{ tests.list[22].place }}</li>
+        <li>Инв. {{ tests.list[22].inv }}</li>
+        <li>{{ tests.list[22].material }}</li>
+        <li>{{ tests.list[22].size }} см.</li>
+        <li>{{ tests.list[22].masters }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>Небольшой по размерам бюстик ребенка был приобретен музеями Берлина в 1914 году по обмену с Ландесмузеумом города
+      Касселя. Его история прослеживается c XVII века, когда скульптура находилась в Гааге, в коллекции
+      главнокомандующего голландским флотом Якоба ван Вассернара, барона Обдама. Собрание было приобретено в 1750 году
+      Вильгельмом VII, ландграфом Гессен-Касселя. Скульптура, известная в нескольких повторениях, неоднократно
+      переатрибутировалсь – Боде, отвергший неправдоподобную версию об авторстве Витторио Гиберти, с сомнением считал ее
+      работой флорентийского скульптора конца XV столетия. Существенное сходство с другим произведением малой пластики –
+      небольшого размера наклоненной женской головкой, приписываемой венецианскому скульптору Антонио Ломбарди (Модена,
+      Галерея Эстенсе и Берлин, Боде-музей), позволяет считать обе работы произведением одной мастерской.
+    </p>
+    <p><i>Реставрация</i></p>
+    <p>Определен состав металла. Проведена очистка и укрепление поверхности.</p>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,66 @@
+---
+title: Item page | twice-rescued
+description: twice-rescued
+---
+{% set page_title = "index" %}
+{% set page_lang_link = "18" %}
+{% extends "../templates/layouts/_layout-eng.html" %}
+
+{% block content %}
+
+{% import "../templates/data/data.html" as tests %}
+
+<section class="card  card--horizontal">
+
+  <div class="before-after-eng">
+    <!-- The before image is first -->
+    <img src="img/state/{{ tests.list[17].id }}/{{ tests.list[17].id }}-before.jpg" alt="Фотография до реставрации">
+    <!-- The after image is last -->
+    <img src="img/state/{{ tests.list[17].id }}/{{ tests.list[17].id }}-after.jpg" alt="Фотография после реставрации">
+  </div>
+
+  <div class="card__description">
+    <div class="card__text">
+
+      <div class="arrows">
+        <a href="{{ tests.list[16].id }}-eng.html" class="arrows__link"><img src="img/left-arrow.svg" width="50"
+            alt=""></a>
+        <a href="{{ tests.list[18].id }}-eng.html" class="arrows__link"><img src="img/right-arrow.svg" width="50"
+            alt=""></a>
+      </div>
+      <h2>{{ tests.list[17].author_eng }}</h2>
+      <h3>{{ tests.list[17].title_eng }}</h3>
+
+      <ul>
+        <li>{{ tests.list[17].place_eng }}</li>
+        <li>Inv. {{ tests.list[17].inv_eng }}</li>
+        <li>{{ tests.list[17].material_eng }}</li>
+        <li>{{ tests.list[17].size }} cm.</li>
+        <li>{{ tests.list[17].fact_eng }}</li>
+        <li>{{ tests.list[17].masters_eng }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card__article">
+    <p>The relief Flagellation of Christ purchased by Wilhelm von Bode for the Berlin museums in the late 19th century
+      with the mediation of the powerful Italian antiquarian Stefano Bardini, is among the most interesting and
+      controversial masterpieces of the former Berlin collection. Being initially attributed to Michelangelo and
+      originating from the collection of the famous Florentine family of Perruzzi, the relief was identified by Bode as
+      an early work of Donatello that was created in the 1420s, close to The Feast of Herod for the baptistery in Siena.
+      The relief was listed among the works of the sculptor up until 1958 when an authoritative monograph by H. W.
+      Janson attributed it to an unknown sculptor of the 1480s. The new details obtained during the examination of the
+      relief and the information from the Bardini archive which was unavailable for researchers for a long time, allowed
+      to propose with a strong possibility that the author of the relief was, in fact, a talented sculptor, who lived in
+      the 19th century and created a brilliant falsification that could not be identified by specialists for over a
+      decade.
+    </p>
+    <p><i>Conservation</i></p>
+    <p>During the research together with the Kurchatov Institute it turned out that the marble was severely damaged,
+      lost its properties and turned into lime. The relief became so fragile that it crumbles every time it is touched.
+      The specialists from IREA have developed a composition for gentle cleaning of the surface from soot. We are
+      planning to clean the fragments first, and then consolidate each fragment with a special composition and then to
+      assemble the relief on a custom-made base.</p>
+  </div>
+</section>
+
+{% endblock %}
